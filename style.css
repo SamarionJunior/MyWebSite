@@ -13,6 +13,7 @@
 html{
     font-size: 62.5%;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
     body *{
@@ -21,7 +22,7 @@ html{
         line-height: calc(1.6rem / 100 * 120);
         /* border-radius: 4px; */
 
-        transition: all ease 0.1s;
+        transition: all ease 0.3s;
     }
 
     .App{
@@ -33,55 +34,196 @@ html{
         background-color: #eee;
     }
 
-        .Content{
+        .HeaderLinks{
+            top: 0;
+            right: 0;
+            position: fixed;
             width: calc(100% - 5rem);
-            height: 100vh;
-            overflow: hidden;
+            height: 100%;
+            max-height: 5rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 999;
         }
-
-            .HeaderLinks{
-                top: 0;
-                right: 0;
-                position: fixed;
-                width: calc(100% - 5rem);
+        
+            .HeaderLink{
+                width: 5rem;
                 height: 100%;
-                max-height: 5rem;
+                /* padding: 0 5rem; */
                 display: flex;
-                justify-content: flex-start;
+                flex-direction: row;
+                justify-content: center;
                 align-items: center;
-                z-index: 999;
             }
-            
-                .NavLink{
-                    width: 5rem;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
+        
+            .HeaderLink:hover{
+                background-color: white;
+            }
+
+                .HeaderLink > i{
+                    color: white;
                 }
 
-            .ContentLinks{
-                top: 0;
-                left: 0;
-                position: fixed;
+                .HeaderLink:hover > i{
+                    color: black;
+                }
+
+
+
+        .ContentLinks{
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            max-width: 5rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+            .ContentLink{
                 width: 100%;
-                max-width: 5rem;
-                height: 100vh;
+                height: 5rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
+        
+            .ContentLink:hover{
+                background-color: black;
+            }
 
-                .ContentLink{
-                    width: 100%;
-                    height: 5rem;
+                .ContentLink > i{
+                    color: black;
+                }
+
+                .ContentLink:hover > i{
+                    color: white;
+                }
+
+        .Content{
+            width: calc(100% - 5rem);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .Home{
+                width: 100%;
+                max-width: 1920px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                position: relative;
+            }
+
+            .Home::before{
+                background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(255,255,255,0.0)), url("./03.jpg");
+                background-size: cover;
+                background-position: top right;
+                background-repeat: no-repeat;
+
+                content: "";
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+
+                filter: brightness(80%);
+            }
+
+                .Section{
+                    position: relative;
+                    
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
+                    align-items: flex-start;
+                    margin-left: 5rem;
+                    /* border: 1px solid black; */
                 }
+
+                    .HomeTitle{
+                        width: 100%;
+                        text-align: left;
+                        font-size: 9.6rem;
+                        line-height: calc(9.6rem / 100 * 120);
+                        text-transform: uppercase;
+                        letter-spacing: 2rem;
+                        /* margin: 0.5rem; */
+                        /* padding: 0.5rem; */
+                        color: white;
+
+                        text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                    }
+
+                    .HomeSubTitle{
+                        width: 100%;
+                        text-align: center;
+                        font-size: 3.6rem;
+                        line-height: calc(9.6rem / 100 * 120);
+                        /* margin: 0.5rem; */
+                        /* padding: 0.5rem; */
+                        color: white;
+
+                        text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                    }
+
+                    .HomeButtons{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 1rem;
+                        width: 100%;
+                        /* margin: 0.5rem; */
+                        /* padding: 0.5rem; */
+                    }
+
+                        .HomeButton{
+                            width: calc(50% - 1.25rem);
+                            text-align: center;
+                            display: inline;
+                            font-weight: bold;
+                            padding: 1.0rem 2.5rem;
+                            border: 1px solid white;
+                            cursor: pointer;
+                            background-color: white;
+                        }
+
+                        .HomeButton:first-of-type{
+                            margin-right: 2.5rem;
+                        }
+
+                        .HomeButton:hover{
+                            color: white;
+                            background-color: black;
+                        }
+                        /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                        transition: all 0.3s cubic-bezier(.25,.8,.25,1); */
+                        /* border: 1px solid black; */
+
+                        .HomeButton:active{
+                            /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                            transition: all 0.3s cubic-bezier(.25,.8,.25,1); */
+                            /* border: 1px solid black; */
+                            /* color: white;
+                            background-color: black; */
+                            color: black;
+                            border: 1px solid white;
+                            background-color: white;
+                        }
+
 
             .Slider{
                 width: 100%;

@@ -4,36 +4,120 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
         <link rel="stylesheet" href="style.css">
         <title>My Web Site</title>
     </head>
     <body>
         <div class="App">
             <div class="HeaderLinks">
-                <a class="NavLink" href="#Content1">H</a>
+
+                <a class="HeaderLink" href="#Content1">
+                    <i class="fa-solid fa-copyright"></i>
+                </a>
+
             </div>
+
             <div class="ContentLinks">
-                <a class="ContentLink" href="#Content1">1</a>
-                <a class="ContentLink" href="#Content2">2</a>
-                <a class="ContentLink" href="#Content3">3</a>
+                
+                <a class="ContentLink" href="#Content1">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a class="ContentLink" href="#Content2">
+                    <i class="fa-solid fa-folder-open"></i>
+                </a>
+                <a class="ContentLink" href="#Content3">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
             </div>
-            <div class="Content" id="Content1"></div>
-            <div class="Content" id="Content2">
-                <div class="Slider">
-                    <div class="SliderLinks">
-                        <a class="SliderLink" href="#Slide1">1</a>
-                        <a class="SliderLink" href="#Slide2">2</a>
-                        <a class="SliderLink" href="#Slide3">3</a>
-                    </div>
-                    <div class="Scroll">
-                        <div class="Slide" id="Slide1"></div>
-                        <div class="Slide" id="Slide2"></div>
-                        <div class="Slide" id="Slide3"></div>
+
+            <div class="Content" id="Content1">
+                <div class="Home">
+                    <div class="Section">
+
+                        <h1 class="HomeTitle">
+                            Samarión<br>Júnior
+                        </h1>
+
+                        <h3 class="HomeSubTitle">
+                            Desenvolvedor Web
+                        </h3>
+
+                        <div class="HomeButtons">
+
+                            <a class="HomeButton" href="#Content2">
+                                Portfólio
+                            </a>
+
+                            <a class="HomeButton" href="#Content3">
+                                Contato
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="Content" id="Content2">
+
+                <div class="Slider">
+
+                    <div class="SliderLinks">
+
+                        <a class="SliderLink" href="#Slide1">
+                            1
+                        </a>
+                        <a class="SliderLink" href="#Slide2">
+                            2
+                        </a>
+                        <a class="SliderLink" href="#Slide3">
+                            3
+                        </a>
+
+                    </div>
+
+                    <div class="Scroll">
+
+                        <div class="Slide" id="Slide1"></div>
+                        <div class="Slide" id="Slide2"></div>
+                        <div class="Slide" id="Slide3"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
             <div class="Content" id="Content3"></div>
         </div>
         <script src="./main.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+        </script> -->
     </body>
 </html>
