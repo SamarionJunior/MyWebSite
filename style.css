@@ -49,7 +49,6 @@ html{
             .HeaderLink{
                 width: 5rem;
                 height: 100%;
-                /* padding: 0 5rem; */
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -115,7 +114,7 @@ html{
             align-items: center;
         }
 
-            .Home{
+            /* .Home{
                 width: 100%;
                 max-width: 1920px;
                 height: 100%;
@@ -148,7 +147,6 @@ html{
                     justify-content: center;
                     align-items: flex-start;
                     margin-left: 5rem;
-                    /* border: 1px solid black; */
                 }
 
                     .HomeTitle{
@@ -158,8 +156,6 @@ html{
                         line-height: calc(9.6rem / 100 * 120);
                         text-transform: uppercase;
                         letter-spacing: 2rem;
-                        /* margin: 0.5rem; */
-                        /* padding: 0.5rem; */
                         color: white;
 
                         text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -171,8 +167,6 @@ html{
                         text-align: center;
                         font-size: 3.6rem;
                         line-height: calc(9.6rem / 100 * 120);
-                        /* margin: 0.5rem; */
-                        /* padding: 0.5rem; */
                         color: white;
 
                         text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -185,8 +179,6 @@ html{
                         align-items: center;
                         margin-top: 1rem;
                         width: 100%;
-                        /* margin: 0.5rem; */
-                        /* padding: 0.5rem; */
                     }
 
                         .HomeButton{
@@ -208,23 +200,101 @@ html{
                             color: white;
                             background-color: black;
                         }
-                        /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-                        transition: all 0.3s cubic-bezier(.25,.8,.25,1); */
-                        /* border: 1px solid black; */
 
                         .HomeButton:active{
-                            /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-                            transition: all 0.3s cubic-bezier(.25,.8,.25,1); */
-                            /* border: 1px solid black; */
-                            /* color: white;
-                            background-color: black; */
                             color: black;
                             border: 1px solid white;
                             background-color: white;
+                        } */
+
+            .Pojects{
+                width: 100%;
+                max-width: 1024px;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+            }
+                .Project{
+                    margin: 1rem;
+                    width: 100%;
+                    max-width: 300px;
+                    min-width: 100px;
+                    height: auto;
+                    min-height: 100px;
+                    background-color: white;
+                }
+                    .Thumbnail{
+                        width: 100%;
+                        max-width: 300px;
+                        min-width: 100px;
+                        height: auto;
+                        min-height: 100px;
+                        position: relative;
+                    }
+                    .Thumbnail::before{
+                        background-image: url("./todolist.jpg");
+                        background-size: cover;
+                        background-position: top left;
+                        background-repeat: no-repeat;
+        
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .Description{
+                        padding: 1.0rem 0.0rem;
+                        margin: 0.0rem 2.0rem;
+                        width: calc(100% - 4.0rem);
+                        max-width: 300px;
+                        min-width: 100px;
+                        height: auto;
+                        min-height: 100px;
+                    }
+                        .CardTitle{
+                            font-weight: bold;
+                            margin-bottom: 1rem;
+                        }
+                        .CardParagraph{
+                            font-size: 1.2rem;
+                            line-height: calc(1.2rem / 100 * 120);
+                            text-align: start;
+                        }
+                    .ProjectButtons{
+                        padding: 1.0rem 0.0rem;
+                        margin: 0.0rem 2.0rem;
+                        width: calc(100% - 4.0rem);
+                        border-top: 1px solid black;
+                        max-width: 300px;
+                        min-width: 100px;
+                        height: auto;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                        .ProjectButton{
+                            color: #444;
+                            font-size: 1.2rem;
+                            letter-spacing: 0.2rem;
+                            line-height: calc(1.2rem / 100 * 120);
+                            display: inline;
+                            padding: 0.5rem 1rem;
+                            text-align: center;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            cursor: pointer;
+                        }
+                        .ProjectButton:hover{
+                            color: #000;
+                            text-decoration: underline;
                         }
 
-
-            .Slider{
+            /* .Slider{
                 width: 100%;
                 height: 100%;
                 position: relative;
@@ -264,96 +334,96 @@ html{
                         height: 100%;
                     }
 
-#Content3{
-    justify-content: space-between;
-}
-.Information{
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.Form{
-    padding: 1.0rem;
-    margin-bottom: 1.0rem;
-}
-.Groups{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 1.0rem;
-}
-.LabelInputText{
-    display: flex;
-    width: 100%;
-    padding: 1rem;
-}
-.InputText{
-    display: flex;
-    width: 100%;
-    padding: 1rem;
-}
-.TextArea{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    min-height: 15rem;
-    padding: 1rem;
-}
-.InputButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-    margin-top: 1rem;
-    font-weight: bold;
-    background-color: black;
-    cursor: pointer;
-    border: 1px solid black;
-    color: white;
-}
-.InputButton:hover{
-    color: black;
-    background-color: white;
-}
-.Groups:last-child{
-    margin-bottom: 0;
-}
-.SocialMidias{
-    padding: 1.0rem;
-    margin-bottom: 1.0rem;
-    line-height: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.Email{
-    padding: 1rem;
-    text-align: center;
-}
-.Icons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Icons>i{
-    padding: 1rem;
-    font-size: 2.8rem;
-}
-.Icons>i:hover{
-    transform: translateY(-15%);
-}
-.Footer{
-    width: 100%;
-    text-align: center;
-    padding: 1.0rem;
-    background-color: black;
-}
-.Copyright{
-    font-size: 1.2rem;
-    color: white;
-}
+        #Content3{
+            justify-content: space-between;
+        }
+            .Information{
+                width: 100%;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+                .Form{
+                    padding: 1.0rem;
+                    margin-bottom: 1.0rem;
+                }
+                    .Groups{
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        margin-bottom: 1.0rem;
+                    }
+                        .LabelInputText{
+                            display: flex;
+                            width: 100%;
+                            padding: 1rem;
+                        }
+                        .InputText{
+                            display: flex;
+                            width: 100%;
+                            padding: 1rem;
+                        }
+                        .TextArea{
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            min-height: 15rem;
+                            padding: 1rem;
+                        }
+                        .InputButton{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            padding: 1rem;
+                            margin-top: 1rem;
+                            font-weight: bold;
+                            background-color: black;
+                            cursor: pointer;
+                            border: 1px solid black;
+                            color: white;
+                        }
+                        .InputButton:hover{
+                            color: black;
+                            background-color: white;
+                        }
+                    .Groups:last-child{
+                        margin-bottom: 0;
+                    }
+                .SocialMidias{
+                    padding: 1.0rem;
+                    margin-bottom: 1.0rem;
+                    line-height: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    .Email{
+                        padding: 1rem;
+                        text-align: center;
+                    }
+                    .Icons{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                        .Icons>i{
+                            padding: 1rem;
+                            font-size: 2.8rem;
+                        }
+                        .Icons>i:hover{
+                            transform: translateY(-15%);
+                        }
+            .Footer{
+                width: 100%;
+                text-align: center;
+                padding: 1.0rem;
+                background-color: black;
+            }
+                .Copyright{
+                    font-size: 1.2rem;
+                    color: white;
+                } */
