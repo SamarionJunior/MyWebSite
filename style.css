@@ -1,5 +1,7 @@
 *{
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Roboto Mono', monospace; */
+    /* font-family: 'Lora', serif; */
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,6 +10,10 @@
     text-decoration: 0;
     line-height: 0;
     color: #111;
+    /* opacity: 100%;
+    opacity: 85%;
+    opacity: 60%;
+    opacity: 50%; */
 }
 
 html{
@@ -20,6 +26,15 @@ html{
         font-size: 1.6rem;
         letter-spacing: normal;
         line-height: calc(1.6rem / 100 * 120);
+        /* font-size: 2.8rem;
+        letter-spacing: normal;
+        line-height: calc(2.8rem / 100 * 120);
+        font-size: 3.2rem;
+        letter-spacing: normal;
+        line-height: calc(3.2rem / 100 * 120);
+        font-size: 10.8rem;
+        letter-spacing: normal;
+        line-height: calc(10.8rem / 100 * 120);*/
         /* border-radius: 4px; */
 
         transition: all ease 0.3s;
@@ -114,7 +129,7 @@ html{
             align-items: center;
         }
 
-            /* .Home{
+            .Home{
                 width: 100%;
                 max-width: 1920px;
                 height: 100%;
@@ -152,11 +167,13 @@ html{
                     .HomeTitle{
                         width: 100%;
                         text-align: left;
-                        font-size: 9.6rem;
-                        line-height: calc(9.6rem / 100 * 120);
+                        font-size: 10.8rem;
+                        line-height: calc(10.8rem / 100 * 120);
                         text-transform: uppercase;
                         letter-spacing: 2rem;
                         color: white;
+
+                        font-family: 'Roboto Mono', monospace;
 
                         text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -166,8 +183,11 @@ html{
                         width: 100%;
                         text-align: center;
                         font-size: 3.6rem;
-                        line-height: calc(9.6rem / 100 * 120);
+                        line-height: calc(3.6rem / 100 * 120);
+                        margin: 1rem;
                         color: white;
+
+                        font-family: 'Lora', serif;
 
                         text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -205,7 +225,7 @@ html{
                             color: black;
                             border: 1px solid white;
                             background-color: white;
-                        } */
+                        }
 
             .Pojects{
                 width: 100%;
@@ -256,13 +276,17 @@ html{
                         min-height: 100px;
                     }
                         .CardTitle{
+                            font-size: 2.8rem;
+                            line-height: calc(2.8rem / 100 * 120);
                             font-weight: bold;
                             margin-bottom: 1rem;
+
+                            font-family: 'Lora', serif;
                         }
                         .CardParagraph{
-                            font-size: 1.2rem;
-                            line-height: calc(1.2rem / 100 * 120);
                             text-align: start;
+                            
+                            opacity: 85%;
                         }
                     .ProjectButtons{
                         padding: 1.0rem 0.0rem;
@@ -278,10 +302,7 @@ html{
                         align-items: center;
                     }
                         .ProjectButton{
-                            color: #444;
-                            font-size: 1.2rem;
-                            letter-spacing: 0.2rem;
-                            line-height: calc(1.2rem / 100 * 120);
+                            opacity: 50%;
                             display: inline;
                             padding: 0.5rem 1rem;
                             text-align: center;
@@ -290,7 +311,7 @@ html{
                             cursor: pointer;
                         }
                         .ProjectButton:hover{
-                            color: #000;
+                            opacity: 85%;
                             text-decoration: underline;
                         }
 
@@ -332,7 +353,7 @@ html{
                     .Slide{
                         min-width: 100%;
                         height: 100%;
-                    }
+                    } */
 
         #Content3{
             justify-content: space-between;
@@ -413,6 +434,7 @@ html{
                         .Icons>i{
                             padding: 1rem;
                             font-size: 2.8rem;
+                            line-height: calc(2.8rem / 100 * 120);
                         }
                         .Icons>i:hover{
                             transform: translateY(-15%);
@@ -425,5 +447,6 @@ html{
             }
                 .Copyright{
                     font-size: 1.2rem;
+                    line-height: calc(1.2rem / 100 * 120);
                     color: white;
-                } */
+                } 
