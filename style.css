@@ -288,7 +288,7 @@ html{
                         flex-direction: column;
                     }
                         .CardTitle{
-                            color: 111;
+                            color: #111;
                             font-size: 2.8rem;
                             line-height: calc(2.8rem / 100 * 120);
                             font-weight: bold;
