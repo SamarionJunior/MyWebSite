@@ -231,29 +231,35 @@ html{
 
             .Pojects{
                 width: 100%;
-                max-width: 1024px;
-                height: 100%;
+                max-width: 1920px;
+                min-height: 480px;
+                max-height: 660px;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
-                padding: 1rem;
+                padding: 2rem;
             }
                 .Project{
-                    margin: 1rem;
-                    width: 100%;
-                    max-width: 660px;
+                    margin: 2rem;
+                    width: calc(100% - 4rem);
+                    max-width: 480px;
                     min-width: 280px;
-                    height: auto;
-                    min-height: 100px;
+                    height: calc(100% - 4rem);
+                    max-height: 660px;
+                    min-height: 280px;
                     background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 }
                     .Thumbnail{
                         width: 100%;
                         max-width: 660px;
                         min-width: 280px;
                         height: auto;
-                        max-height: 330px;
-                        min-height: 140px;
+                        max-height: calc(660px / 3 * 2);
+                        min-height: calc(280px / 3 * 2);
                         position: relative;
                     }
                     .Thumbnail::before{
@@ -270,34 +276,57 @@ html{
                         height: 100%;
                     }
                     .Description{
-                        padding: 1.0rem 0.0rem;
-                        margin: 0.0rem 2.0rem;
+                        margin:2.0rem;
                         width: calc(100% - 4.0rem);
-                        max-width: 300px;
                         min-width: 100px;
-                        height: auto;
+                        height: 100%;
                         min-height: 100px;
+
+                        flex-grow: 1;
+
+                        display: flex;
+                        flex-direction: column;
                     }
                         .CardTitle{
+                            color: 111;
                             font-size: 2.8rem;
                             line-height: calc(2.8rem / 100 * 120);
                             font-weight: bold;
-                            margin-bottom: 1rem;
 
                             font-family: 'Lora', serif;
                         }
+                        .Tags{
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-bottom: 2rem;
+                            width: 100%;
+                        }
+                            .Tag{
+                                font-size: 1.2rem;
+                                line-height: calc(1.2rem / 100 * 120);
+                                border: 1px solid black;
+                                padding: 0 1rem;
+                                margin-right: 0.5rem;
+                                margin-top: 0.5rem;
+                                border-radius: 1.0rem;
+                            }
+                            .Tag:last-of-type{
+                                margin-right: 0.0rem;
+                            }
                         .CardParagraph{
                             text-align: start;
                             
                             opacity: 85%;
+
+                            flex-grow: 1;
+                            overflow: auto;
                         }
                     .ProjectButtons{
-                        padding: 1.0rem 0.0rem;
-                        margin: 0.0rem 2.0rem;
-                        width: calc(100% - 4.0rem);
-                        border-top: 1px solid black;
-                        max-width: 300px;
-                        min-width: 100px;
+                        padding: 2.0rem 0;
+                        padding-bottom: 1.5rem;
+                        margin: 0 2.0rem;
+                        width: calc(100% - 4rem);
+                        border-top: 1px solid #999999;
                         height: auto;
                         display: flex;
                         flex-wrap: wrap;
@@ -305,9 +334,10 @@ html{
                         align-items: center;
                     }
                         .ProjectButton{
-                            color: #8e8e8e;
+                            color: #999999;
                             display: inline;
-                            padding: 0.5rem 1rem;
+                            padding: 0 1rem;
+                            margin-bottom: 0.5rem;
                             text-align: center;
                             font-weight: bold;
                             text-transform: uppercase;
@@ -316,6 +346,9 @@ html{
                         .ProjectButton:hover{
                             color: #000;
                             text-decoration: underline;
+                        }
+                        .ProjectButton{
+
                         }
 
             /* .Slider{
