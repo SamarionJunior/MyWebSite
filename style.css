@@ -241,18 +241,19 @@ html{
                 .Project{
                     margin: 1rem;
                     width: 100%;
-                    max-width: 300px;
-                    min-width: 100px;
+                    max-width: 660px;
+                    min-width: 280px;
                     height: auto;
                     min-height: 100px;
                     background-color: white;
                 }
                     .Thumbnail{
                         width: 100%;
-                        max-width: 300px;
-                        min-width: 100px;
+                        max-width: 660px;
+                        min-width: 280px;
                         height: auto;
-                        min-height: 100px;
+                        max-height: 330px;
+                        min-height: 140px;
                         position: relative;
                     }
                     .Thumbnail::before{
@@ -304,7 +305,7 @@ html{
                         align-items: center;
                     }
                         .ProjectButton{
-                            opacity: 50%;
+                            color: #8e8e8e;
                             display: inline;
                             padding: 0.5rem 1rem;
                             text-align: center;
@@ -313,7 +314,7 @@ html{
                             cursor: pointer;
                         }
                         .ProjectButton:hover{
-                            opacity: 85%;
+                            color: #000;
                             text-decoration: underline;
                         }
 
