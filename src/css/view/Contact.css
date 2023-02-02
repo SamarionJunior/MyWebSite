@@ -1,0 +1,211 @@
+#Content3{
+    justify-content: space-between;
+    /* position: relative; */
+}
+/* #Content3::before{
+    background-image: url("./03.jpg");
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+} */
+    .Information{
+        width: 100%;
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* z-index: 2000; */
+    }
+        .InformationCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            .Form{
+                padding: 2.0rem;
+                margin-bottom: 2rem;
+                background-color: white;
+                width: 100%;
+                max-width: 664px;
+            }
+                .Groups{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+                    .LabelInputText{
+                        display: flex;
+                        width: 100%;
+                        padding-left: 0;
+                        padding-bottom: 0.5rem;
+                    }
+                    .InputText{
+
+                        display: flex;
+                        width: 100%;
+                        padding: 1rem;
+
+                        background-color: #eee;
+                    }
+                    .TextArea{                 
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        min-height: 15rem;
+                        padding: 1rem;
+                        resize: none;
+                        
+                        background-color: #eee;
+                    }
+                    /* .InputText{
+
+                        display: flex;
+                        width: 100%;
+                        padding: 1rem;
+
+                        background-color: #fff;
+
+                        border: 1px solid rgba(0, 0, 0, 0.25);
+                        color: #111;
+                    }
+                    .InputText:focus{
+                        border: 1px solid #111;
+                    }
+                    .InputText::placeholder{
+                        color: rgba(0, 0, 0, 0.25);
+                    }
+                    .InputText:focus::placeholder{
+                        color: #111;
+                    }
+                    .TextArea{                 
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        min-height: 15rem;
+                        padding: 1rem;
+                        resize: none;
+                        
+                        background-color: #fff;
+
+                        border: 1px solid rgba(0, 0, 0, 0.25);
+                        color: #111;
+                    }
+                    .TextArea:focus{
+                        border: 1px solid #111;
+                    }
+                    .TextArea::placeholder{
+                        color: rgba(0, 0, 0, 0.25);
+                    }
+                    .TextArea:focus::placeholder{
+                        color: #111;
+                    } */
+                    .InputButton{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        padding: 1rem;
+                        margin-top: 1rem;
+                        font-weight: bold;
+                        background-color: black;
+                        cursor: pointer;
+                        border: 1px solid black;
+                        color: white;
+                    }
+                    .InputButton:hover{
+                        color: black;
+                        background-color: white;
+                    }
+                .Groups:last-child{
+                    margin-bottom: 0;
+                }
+            .Contact{
+                padding: 2.0rem;
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 100%;
+                height: 100%;
+            }
+                .Email{
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid black;
+                    width: 100%;
+                    height: 100%;
+                }
+                    .EmailText{
+                        padding: 1rem;
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .Email>i{
+                        cursor: pointer;
+                        padding: 1rem;
+                        height: 100%;
+                        color: black;
+                        background-color: white;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .Email>i:hover{
+                        color: white;
+                        background-color: black;
+                    }
+            .SocialMidias{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 100%;
+                background-color: black;
+            }
+                .Icons{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                }
+                    .Icons>i{
+                        color: white;
+                        padding: 1rem 2rem;
+                        font-size: 2.8rem;
+                        line-height: calc(2.8rem / 100 * 120);
+                    }
+                    .Icons>i:hover{
+                        color: black;
+                        background-color: white;
+                        /* transform: translateY(-15%); */
+                    }
+        .Footer{
+            width: 100%;
+            text-align: center;
+            padding: 1.0rem;
+            background-color: black;
+        }
+            .Copyright{
+                font-size: 1.2rem;
+                line-height: calc(1.2rem / 100 * 120);
+                color: white;
+            } 

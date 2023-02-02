@@ -1,0 +1,44 @@
+.ContentLinks{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    max-width: 5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+    .ContentLink{
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ContentLink:hover{
+        background-color: black;
+    }
+
+        .ContentLink > i{
+            color: black;
+        }
+
+        .ContentLink:hover > i{
+            color: white;
+        }
+
+.Content{
+    width: calc(100% - 5rem);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

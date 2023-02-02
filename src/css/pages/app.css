@@ -1,0 +1,14 @@
+@import url("../view/Hearder.css");
+@import url("../view/Navegation.css");
+@import url("../view/Home.css");
+@import url("../view/Projects.css");
+@import url("../view/Contact.css");
+
+.App{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #eee;
+}
