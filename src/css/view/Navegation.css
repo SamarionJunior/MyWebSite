@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--White);
 }
 
     .ContentLink{
@@ -22,15 +22,15 @@
     }
 
     .ContentLink:hover{
-        background-color: black;
+        background-color: var(--Black);
     }
 
         .ContentLink > i{
-            color: black;
+            color: var(--Black);
         }
 
         .ContentLink:hover > i{
-            color: white;
+            color: var(--White);
         }
 
 .Content{

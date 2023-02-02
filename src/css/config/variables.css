@@ -1,0 +1,47 @@
+:root{
+
+    /* Colors */
+
+    --Black: #000;
+    --White: #fff;
+    --Light-Gray: #eee;
+    --Dark-Gray: #111;
+    --Medium-Gray: #999999;
+    --High-Opacity-Black: rgba(0,0,0,0.85);
+    --Low-Opacity-Balck: rgba(0, 0, 0, 0.15);
+
+    --Linear-Gradiente: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(255,255,255,0.0));
+
+    --Text-Shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --Transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    /* Fonts */
+
+    --Font-Family-Display: 'Rubik Mono One', sans-serif;
+    --Font-Family-Title: 'Lora', serif;
+    --Font-Family-Normal: 'Montserrat', sans-serif;
+
+    --Letter-Spacing-Normal: normal;
+
+    --Font-Size-Small: 1.2rem;
+    --Line-Height-Small: calc(1.2rem / 100 * 120);
+
+    --Font-Size-Normal: 1.6rem;
+    --Line-Height-Normal: calc(1.6rem / 100 * 120);
+
+    --Font-Size-SubTitle: 2.8rem;
+    --Line-Height-SubTitle: calc(2.8rem / 100 * 120);
+
+    --Font-Size-Title: 3.2rem;
+    --Letter-Spacing-Title: 0.32rem;
+    --Line-Height-Title: calc(3.2rem / 100 * 120);
+
+    --Font-Size-Display: 10.8rem;
+    --Letter-Spacing-Display: 1.08rem;
+    --Line-Height-Display: calc(10.8rem / 100 * 120);
+
+    --Font-Weight-Regular: 400;
+    --Font-Weight-Bold: 700;
+    --Font-Weight-Black: 900;
+
+}

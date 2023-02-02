@@ -1,7 +1,7 @@
 *{
     /* font-family: 'Rubik Mono One', sans-serif; */
     /* font-family: 'Lora', serif; */
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--Font-Family-Normal);
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,7 +9,7 @@
     outline: 0;
     text-decoration: 0;
     line-height: 0;
-    color: #111;
+    color: var(--Dark-Gray);
     /* opacity: 100%;
     opacity: 85%;
     opacity: 60%;
@@ -23,18 +23,10 @@ html{
 }
 
     body *{
-        font-size: 1.6rem;
-        letter-spacing: normal;
-        line-height: calc(1.6rem / 100 * 120);
-        /* font-size: 2.8rem;
-        letter-spacing: normal;
-        line-height: calc(2.8rem / 100 * 120);
-        font-size: 3.2rem;
-        letter-spacing: normal;
-        line-height: calc(3.2rem / 100 * 120);
-        font-size: 10.8rem;
-        letter-spacing: normal;
-        line-height: calc(10.8rem / 100 * 120);*/
+        font-size: var(--Font-Size-Normal);
+        letter-spacing: var(--Letter-Spacing-Normal);
+        line-height: var(--Line-Height-Normal);
+
         /* border-radius: 4px; */
 
         transition: all ease 0.3s;

@@ -1,176 +1,175 @@
 /* #Content2{
             position: relative;
-        } */
-        /* #Content2::before{
-            background-image: url("./03.jpg");
-            background-size: cover;
-            background-position: top right;
-            background-repeat: no-repeat;
+} */
+    /* #Content2::before{
+        background-image: url("./03.jpg");
+        background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
 
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-        } */
-        .Pojects{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+    } */
+    .Pojects{
+        width: calc(100% - 4rem);
+        max-width: 1920px;
+        min-height: 480px;
+        max-height: 660px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        overflow: auto;
+    }
+        .Project{
+            margin: 2rem;
             width: calc(100% - 4rem);
-            max-width: 1920px;
-            min-height: 480px;
+            max-width: 480px;
+            min-width: 280px;
+            height: calc(100% - 4rem);
             max-height: 660px;
+            min-height: 280px;
+            background-color: var(--White);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+            .Thumbnail{
+                width: 100%;
+                max-width: 660px;
+                min-width: 280px;
+                height: auto;
+                max-height: calc(660px / 3 * 2);
+                min-height: calc(280px / 3 * 2);
+                position: relative;
+            }
+            .Thumbnail::before{
+                background-image: url("../../../assets/images/card/todolist.jpg");
+                background-size: cover;
+                background-position: top left;
+                background-repeat: no-repeat;
+
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .Description{
+                margin:2.0rem;
+                width: calc(100% - 4.0rem);
+                min-width: 100px;
+                height: 100%;
+                min-height: 100px;
+
+                flex-grow: 1;
+
+                display: flex;
+                flex-direction: column;
+                background-color: var(--White);
+            }
+                .CardTitle{
+                    color: var(--Dark-Gray);
+                    font-size: var(--Font-Size-SubTitle);
+                    line-height: var(--Line-Height-SubTitle);
+                    font-weight: var(--Font-Weight-Bold);
+                    font-family: var(--Font-Family-Title);
+                }
+                .Tags{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 2rem;
+                    width: 100%;
+                }
+                    .Tag{
+                        font-size: var(--Font-Size-Small);
+                        line-height: var(--Line-Height-Small);
+                        border: 1px solid var(--Black);
+                        padding: 0 1rem;
+                        margin-right: 0.5rem;
+                        margin-top: 0.5rem;
+                        border-radius: 1.0rem;
+                    }
+                    .Tag:last-of-type{
+                        margin-right: 0.0rem;
+                    }
+                .CardParagraph{
+                    text-align: start;
+                    
+                    opacity: 85%;
+
+                    flex-grow: 1;
+                    overflow: auto;
+                    background-color: var(--White);
+                }
+            .ProjectButtons{
+                padding: 2.0rem 0;
+                padding-bottom: 1.5rem;
+                margin: 0 2.0rem;
+                width: calc(100% - 4rem);
+                border-top: 1px solid var(--Medium-Gray);
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+                .ProjectButton{
+                    color: var(--Medium-Gray);
+                    display: inline;
+                    padding: 0 1rem;
+                    margin-bottom: 0.5rem;
+                    text-align: center;
+                    font-weight: var(--Font-Weight-Bold);
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+                .ProjectButton:hover{
+                    color: var(--Black);
+                    text-decoration: underline;
+                }
+
+    /* .Slider{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+        .SliderLinks{
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-height: 5rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 2rem;
-            overflow: auto;
         }
-            .Project{
-                margin: 2rem;
-                width: calc(100% - 4rem);
-                max-width: 480px;
-                min-width: 280px;
-                height: calc(100% - 4rem);
-                max-height: 660px;
-                min-height: 280px;
-                background-color: white;
+        
+            .SliderLink{
+                width: 5rem;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                z-index: 2000;
             }
-                .Thumbnail{
-                    width: 100%;
-                    max-width: 660px;
-                    min-width: 280px;
-                    height: auto;
-                    max-height: calc(660px / 3 * 2);
-                    min-height: calc(280px / 3 * 2);
-                    position: relative;
-                }
-                .Thumbnail::before{
-                    background-image: url("../../../assets/images/card/todolist.jpg");
-                    background-size: cover;
-                    background-position: top left;
-                    background-repeat: no-repeat;
-    
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-                .Description{
-                    margin:2.0rem;
-                    width: calc(100% - 4.0rem);
-                    min-width: 100px;
-                    height: 100%;
-                    min-height: 100px;
 
-                    flex-grow: 1;
-
-                    display: flex;
-                    flex-direction: column;
-                    background-color: white;
-                }
-                    .CardTitle{
-                        color: #111;
-                        font-size: 2.8rem;
-                        line-height: calc(2.8rem / 100 * 120);
-                        font-weight: bold;
-
-                        font-family: 'Lora', serif;
-                    }
-                    .Tags{
-                        display: flex;
-                        flex-wrap: wrap;
-                        margin-bottom: 2rem;
-                        width: 100%;
-                    }
-                        .Tag{
-                            font-size: 1.2rem;
-                            line-height: calc(1.2rem / 100 * 120);
-                            border: 1px solid black;
-                            padding: 0 1rem;
-                            margin-right: 0.5rem;
-                            margin-top: 0.5rem;
-                            border-radius: 1.0rem;
-                        }
-                        .Tag:last-of-type{
-                            margin-right: 0.0rem;
-                        }
-                    .CardParagraph{
-                        text-align: start;
-                        
-                        opacity: 85%;
-
-                        flex-grow: 1;
-                        overflow: auto;
-                        background-color: white;
-                    }
-                .ProjectButtons{
-                    padding: 2.0rem 0;
-                    padding-bottom: 1.5rem;
-                    margin: 0 2.0rem;
-                    width: calc(100% - 4rem);
-                    border-top: 1px solid #999999;
-                    height: auto;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
-                }
-                    .ProjectButton{
-                        color: #999999;
-                        display: inline;
-                        padding: 0 1rem;
-                        margin-bottom: 0.5rem;
-                        text-align: center;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        cursor: pointer;
-                    }
-                    .ProjectButton:hover{
-                        color: #000;
-                        text-decoration: underline;
-                    }
-
-        /* .Slider{
+        .Scroll{
+            display: flex;
             width: 100%;
             height: 100%;
-            position: relative;
+            overflow-x: hidden;
+            height: calc(100% - 5rem);
         }
 
-            .SliderLinks{
-                bottom: 0;
-                left: 0;
-                position: absolute;
-                width: 100%;
+            .Slide{
+                min-width: 100%;
                 height: 100%;
-                max-height: 5rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
-                .SliderLink{
-                    width: 5rem;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-            .Scroll{
-                display: flex;
-                width: 100%;
-                height: 100%;
-                overflow-x: hidden;
-                height: calc(100% - 5rem);
-            }
-
-                .Slide{
-                    min-width: 100%;
-                    height: 100%;
-                } */
+            } */

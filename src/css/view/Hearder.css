@@ -20,13 +20,13 @@
             }
         
             .HeaderLink:hover{
-                background-color: white;
+                background-color: var(--White);
             }
 
                 .HeaderLink > i{
-                    color: white;
+                    color: var(--White);
                 }
 
                 .HeaderLink:hover > i{
-                    color: black;
+                    color: var(--Black);
                 }
