@@ -7,8 +7,10 @@
 .App{
     width: var(--Width-Relative-Max);
     min-height: var(--Width-Absolute-Max);
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
     background-color: var(--Light-Gray);
 }

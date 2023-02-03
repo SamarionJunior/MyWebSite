@@ -78,4 +78,10 @@
     --Margin-Large: 5.0rem;
     --Padding-Large: 5.0rem;
 
+    /* Opacities */
+
+    --Opacity-High: 85%;
+    --Opacity-Medium: 60%;
+    --Opacity-Low: 50%;
+
 }

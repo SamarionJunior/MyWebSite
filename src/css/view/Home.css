@@ -1,48 +1,46 @@
 .Home{
     width: var(--Width-Relative-Max);
     height: var(--Height-Relative-Max);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
     position: relative;
 }
 
 .Home::before{
+    content: "";
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: var(--Width-Relative-Max);
+    height: var(--Height-Relative-Max);
+
     background-image: var(--Linear-Gradiente), url("../../../assets/images/background/03.jpg");
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
-
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--Width-Relative-Max);
-    height: var(--Height-Relative-Max);
 
     filter: brightness(80%);
 }
 
     .Section{
         position: relative;
+
+        margin-left: var(--Margin-Large);
         
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        margin-left: var(--Margin-Large);
     }
 
         .HomeTitle{
-
             width: var(--Width-Relative-Max);
-
-            text-align: left;
-            text-shadow: var(--Text-Shadow);
-            text-transform: uppercase;
-
-            color: var(--White);
 
             font-family: var(--Font-Family-Display);
             font-weight: var(--Font-Weight-Black);
@@ -50,44 +48,59 @@
             letter-spacing: var(--Letter-Spacing-Display);
             line-height: var(--Line-Height-Display);
 
+            color: var(--White);
+
+            text-align: left;
+            text-shadow: var(--Text-Shadow);
+            text-transform: uppercase;
+
             transition: var(--Transition);
         }
 
         .HomeSubTitle{
-            margin: var(--Margin-Regular);
-
             width: var(--Width-Relative-Max);
 
-            text-align: center;
-            text-shadow: var(--Text-Shadow);
-
-            color: var(--White);
+            margin: var(--Margin-Regular);
 
             font-family: var(--Font-Family-Title);
             font-size: var(--Font-Size-Title);
             letter-spacing: var(--Letter-Spacing-Title);
             line-height: var(--Line-Height-Title);
 
+            color: var(--White);
+
+            text-align: center;
+            text-shadow: var(--Text-Shadow);
+
             transition: var(--Transition);
         }
 
         .HomeButtons{
+            width: var(--Width-Relative-Max);
+
+            margin-top: var(--Margin-Regular);
+
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: var(--Margin-Regular);
-            width: var(--Width-Relative-Max);
         }
 
             .HomeButton{
                 width: calc(50% - 1.0rem);
-                text-align: center;
-                display: inline;
-                font-weight: bold;
+
                 padding: var(--Padding-Regular);
-                border: 1px solid var(--White);
-                cursor: pointer;
+
+                display: inline;
+
                 background-color: var(--White);
+
+                font-weight: bold;
+                
+                text-align: center;
+
+                border: 1px solid var(--White);
+
+                cursor: pointer;
             }
 
             .HomeButton:first-of-type{
@@ -95,12 +108,15 @@
             }
 
             .HomeButton:hover{
-                color: var(--White);
                 background-color: var(--Black);
+
+                color: var(--White);
             }
 
             .HomeButton:active{
-                color: var(--Black);
-                border: 1px solid var(--White);
                 background-color: var(--White);
+                
+                color: var(--Black);
+
+                border: 1px solid var(--White);
             }

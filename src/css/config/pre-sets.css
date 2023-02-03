@@ -1,17 +1,18 @@
 *{
-    font-family: var(--Font-Family-Normal);
     margin: 0;
     padding: 0;
+
+    font-family: var(--Font-Family-Normal);
+
+    line-height: 0;
+
+    text-decoration: 0;
+
+    color: var(--Dark-Gray);
+
     border: 0;
     box-sizing: border-box;
     outline: 0;
-    text-decoration: 0;
-    line-height: 0;
-    color: var(--Dark-Gray);
-    /* opacity: 100%;
-    opacity: 85%;
-    opacity: 60%;
-    opacity: 50%; */
 }
 
 html{
