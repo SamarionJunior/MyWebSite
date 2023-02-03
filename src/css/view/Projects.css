@@ -105,6 +105,9 @@
                 margin: 0 var(--Margin-Medium);
                 width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
 
+                display: flex;
+                flex-wrap: wrap;
+
                 border-top: 1px solid var(--Medium-Gray);
             }
 
