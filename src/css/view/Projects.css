@@ -1,5 +1,5 @@
 /* #Content2{
-            position: relative;
+    position: relative;
 } */
     /* #Content2::before{
         background-image: url("./03.jpg");
@@ -13,125 +13,152 @@
         width: 100%; height: 100%;
     } */
     .Pojects{
-        width: calc(100% - 4rem);
+        width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
         max-width: 1920px;
         min-height: 480px;
         max-height: 660px;
+
+        margin: var(--Margin-Medium);
+
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 2rem;
+        
         overflow: auto;
     }
         .Project{
-            margin: 2rem;
-            width: calc(100% - 4rem);
+            width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
             max-width: 480px;
             min-width: 280px;
-            height: calc(100% - 4rem);
+            height: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
             max-height: 660px;
             min-height: 280px;
-            background-color: var(--White);
+
+            margin: var(--Margin-Medium);
+            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            background-color: var(--White);
+
             z-index: 2000;
         }
             .Thumbnail{
-                width: 100%;
+                position: relative;
+
+                width: var(--Width-Relative-Max);
                 max-width: 660px;
                 min-width: 280px;
                 height: auto;
                 max-height: calc(660px / 3 * 2);
                 min-height: calc(280px / 3 * 2);
-                position: relative;
             }
             .Thumbnail::before{
+                content: "";
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: var(--Width-Relative-Max);
+                height: var(--Height-Relative-Max);
+
                 background-image: url("../../../assets/images/card/todolist.jpg");
                 background-size: cover;
                 background-position: top left;
                 background-repeat: no-repeat;
-
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
             }
             .Description{
-                margin:2.0rem;
-                width: calc(100% - 4.0rem);
+                width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
                 min-width: 100px;
-                height: 100%;
+                height: var(--Height-Relative-Max);
                 min-height: 100px;
 
-                flex-grow: 1;
+                margin: var(--Margin-Medium);
 
                 display: flex;
                 flex-direction: column;
+                flex-grow: 1;
+
                 background-color: var(--White);
             }
                 .CardTitle{
-                    color: var(--Dark-Gray);
-                    font-size: var(--Font-Size-SubTitle);
-                    line-height: var(--Line-Height-SubTitle);
-                    font-weight: var(--Font-Weight-Bold);
                     font-family: var(--Font-Family-Title);
+                    font-size: var(--Font-Size-SubTitle);
+                    font-weight: var(--Font-Weight-Bold);
+                    line-height: var(--Line-Height-SubTitle);
+
+                    color: var(--Dark-Gray);
                 }
                 .Tags{
+                    width: var(--Width-Relative-Max);
+
+                    margin-bottom: var(--Margin-Medium);
+
                     display: flex;
                     flex-wrap: wrap;
-                    margin-bottom: 2rem;
-                    width: 100%;
                 }
                     .Tag{
+                        padding: 0 var(--Padding-Regular);
+                        margin-right: var(--Margin-Small);
+                        margin-top: var(--Margin-Small);
+
                         font-size: var(--Font-Size-Small);
                         line-height: var(--Line-Height-Small);
+
                         border: 1px solid var(--Black);
-                        padding: 0 1rem;
-                        margin-right: 0.5rem;
-                        margin-top: 0.5rem;
                         border-radius: 1.0rem;
                     }
                     .Tag:last-of-type{
-                        margin-right: 0.0rem;
+                        margin-right: 0;
                     }
                 .CardParagraph{
+                    flex-grow: 1;
+
+                    background-color: var(--White);
+
                     text-align: start;
                     
                     opacity: 85%;
 
-                    flex-grow: 1;
                     overflow: auto;
-                    background-color: var(--White);
                 }
             .ProjectButtons{
-                padding: 2.0rem 0;
-                padding-bottom: 1.5rem;
-                margin: 0 2.0rem;
-                width: calc(100% - 4rem);
-                border-top: 1px solid var(--Medium-Gray);
                 height: auto;
+
+                padding: var(--Padding-Medium) 0;
+                padding-bottom: var(--Padding-Default);
+                margin: 0 var(--Margin-Medium);
+                width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
+
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+
+                border-top: 1px solid var(--Medium-Gray);
             }
                 .ProjectButton{
-                    color: var(--Medium-Gray);
+                    padding: 0 var(--Padding-Regular);
+                    margin-bottom: var(--Margin-Small);
+
                     display: inline;
-                    padding: 0 1rem;
-                    margin-bottom: 0.5rem;
-                    text-align: center;
+
                     font-weight: var(--Font-Weight-Bold);
+
                     text-transform: uppercase;
+                    text-align: center;
+
+                    color: var(--Medium-Gray);
+
                     cursor: pointer;
                 }
                 .ProjectButton:hover{
-                    color: var(--Black);
                     text-decoration: underline;
+                    
+                    color: var(--Black);
                 }
 
     /* .Slider{

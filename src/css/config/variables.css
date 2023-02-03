@@ -21,6 +21,8 @@
     --Font-Family-Title: 'Lora', serif;
     --Font-Family-Normal: 'Montserrat', sans-serif;
 
+    --Font-Size-Root: 62.5%;
+
     --Letter-Spacing-Normal: normal;
 
     --Font-Size-Small: 1.2rem;
@@ -43,5 +45,37 @@
     --Font-Weight-Regular: 400;
     --Font-Weight-Bold: 700;
     --Font-Weight-Black: 900;
+
+    /* Espaçamento */
+
+    --Width-Lateral: 5rem;
+    --Height-Lateral: 5rem;
+
+    --Width-Relative-Max: 100%;
+    --Height-Relative-Max: 100%;
+
+    --Width-Absolute-Max: 100vw;
+    --Height-Absolute-Max: 100vh;
+    
+    --Margin-Micro: 0.25rem;
+    --Padding-Micro: 0.25rem;
+    
+    --Margin-Small: 0.5rem;
+    --Padding-Small: 0.5rem;
+    
+    --Margin-Regular: 1.0rem;
+    --Padding-Regular: 1.0rem;
+    
+    --Margin-Default: 1.5rem;
+    --Padding-Default: 1.5rem;
+    
+    --Margin-Medium: 2.0rem;
+    --Padding-Medium: 2.0rem;
+    
+    --Margin-Big: 2.5rem;
+    --Padding-Big: 2.5rem;
+    
+    --Margin-Large: 5.0rem;
+    --Padding-Large: 5.0rem;
 
 }

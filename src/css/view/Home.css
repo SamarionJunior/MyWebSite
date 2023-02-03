@@ -1,6 +1,6 @@
 .Home{
-    width: 100%;
-    height: 100%;
+    width: var(--Width-Relative-Max);
+    height: var(--Height-Relative-Max);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,8 +18,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: var(--Width-Relative-Max);
+    height: var(--Height-Relative-Max);
 
     filter: brightness(80%);
 }
@@ -31,12 +31,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        margin-left: 5rem;
+        margin-left: var(--Margin-Large);
     }
 
         .HomeTitle{
 
-            width: 100%;
+            width: var(--Width-Relative-Max);
 
             text-align: left;
             text-shadow: var(--Text-Shadow);
@@ -54,9 +54,9 @@
         }
 
         .HomeSubTitle{
-            margin: 1rem;
+            margin: var(--Margin-Regular);
 
-            width: 100%;
+            width: var(--Width-Relative-Max);
 
             text-align: center;
             text-shadow: var(--Text-Shadow);
@@ -75,23 +75,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 1rem;
-            width: 100%;
+            margin-top: var(--Margin-Regular);
+            width: var(--Width-Relative-Max);
         }
 
             .HomeButton{
-                width: calc(50% - 1.25rem);
+                width: calc(50% - 1.0rem);
                 text-align: center;
                 display: inline;
                 font-weight: bold;
-                padding: 1.0rem 2.5rem;
+                padding: var(--Padding-Regular);
                 border: 1px solid var(--White);
                 cursor: pointer;
                 background-color: var(--White);
             }
 
             .HomeButton:first-of-type{
-                margin-right: 2.5rem;
+                margin-right: var(--Margin-Medium);
             }
 
             .HomeButton:hover{

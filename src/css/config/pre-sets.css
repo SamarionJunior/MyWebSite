@@ -1,6 +1,4 @@
 *{
-    /* font-family: 'Rubik Mono One', sans-serif; */
-    /* font-family: 'Lora', serif; */
     font-family: var(--Font-Family-Normal);
     margin: 0;
     padding: 0;
@@ -17,7 +15,7 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: var(--Font-Size-Root);
     overflow: hidden;
     scroll-behavior: smooth;
 }
@@ -27,7 +25,5 @@ html{
         letter-spacing: var(--Letter-Spacing-Normal);
         line-height: var(--Line-Height-Normal);
 
-        /* border-radius: 4px; */
-
-        transition: all ease 0.3s;
+        transition: var(--Transition);
     }

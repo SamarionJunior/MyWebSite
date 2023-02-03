@@ -1,20 +1,24 @@
 .ContentLinks{
+    position: fixed;
     top: 0;
     left: 0;
-    position: fixed;
-    width: 100%;
-    max-width: 5rem;
-    height: 100vh;
+
+    width: var(--Width-Relative-Max);
+    max-width: var(--Width-Lateral);
+    height: var(--Height-Absolute-Max);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     background-color: var(--White);
 }
 
     .ContentLink{
-        width: 100%;
-        height: 5rem;
+        width: var(--Width-Relative-Max);
+        height: var(--Height-Lateral);
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,11 +38,13 @@
         }
 
 .Content{
-    width: calc(100% - 5rem);
-    height: 100vh;
-    overflow: hidden;
+    width: calc(var(--Width-Relative-Max) - var(--Margin-Large));
+    height: var(--Height-Absolute-Max);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }

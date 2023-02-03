@@ -1,27 +1,16 @@
 #Content3{
     justify-content: space-between;
-    /* position: relative; */
+    
 }
-/* #Content3::before{
-    background-image: url("./03.jpg");
-    background-size: cover;
-    background-position: top right;
-    background-repeat: no-repeat;
-
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-} */
     .Information{
-        width: 100%;
-        flex-grow: 1;
-        height: 100%;
+        width: var(--Width-Relative-Max);
+        height: var(--Height-Relative-Max);
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* z-index: 2000; */
+        flex-grow: 1;
     }
         .InformationCard{
             display: flex;
@@ -30,182 +19,181 @@
             align-items: center;
         }
             .Form{
-                padding: 2.0rem;
-                margin-bottom: 2rem;
-                background-color: var(--White);
-                width: 100%;
+                width: var(--Width-Relative-Max);
                 max-width: 664px;
+
+                padding: var(--Padding-Medium);
+                margin-bottom: var(--Margin-Medium);
+
+                background-color: var(--White);
             }
                 .Groups{
+                    width: var(--Width-Relative-Max);
+
+                    margin-bottom: var(--Margin-Regular);
+
                     display: flex;
                     flex-wrap: wrap;
-                    width: 100%;
-                    margin-bottom: 1rem;
                 }
                     .LabelInputText{
-                        display: flex;
-                        width: 100%;
                         padding-left: 0;
-                        padding-bottom: 0.5rem;
+                        padding-bottom: var(--Padding-Small);
+
+                        width: var(--Width-Relative-Max);
+
+                        display: flex;
                     }
                     .InputText{
+                        padding: var(--Padding-Small);
+
+                        width: var(--Width-Relative-Max);
 
                         display: flex;
-                        width: 100%;
-                        padding: 1rem;
 
                         background-color: var(--Light-Gray);
                     }
-                    .TextArea{                 
+                    .TextArea{
+                        padding: var(--Padding-Small);
+
+                        width: var(--Width-Relative-Max);
+                        height: var(--Height-Relative-Max);
+                        min-height: calc(var(--Height-Lateral) * 3); 
+
                         display: flex;
-                        width: 100%;
-                        height: 100%;
-                        min-height: 15rem;
-                        padding: 1rem;
-                        resize: none;
                         
                         background-color: var(--Light-Gray);
-                    }
-                    /* .InputText{
-
-                        display: flex;
-                        width: 100%;
-                        padding: 1rem;
-
-                        background-color: #fff;
-
-                        border: 1px solid rgba(0, 0, 0, 0.25);
-                        color: #111;
-                    }
-                    .InputText:focus{
-                        border: 1px solid #111;
-                    }
-                    .InputText::placeholder{
-                        color: rgba(0, 0, 0, 0.25);
-                    }
-                    .InputText:focus::placeholder{
-                        color: #111;
-                    }
-                    .TextArea{                 
-                        display: flex;
-                        width: 100%;
-                        height: 100%;
-                        min-height: 15rem;
-                        padding: 1rem;
-                        resize: none;
                         
-                        background-color: #fff;
-
-                        border: 1px solid rgba(0, 0, 0, 0.25);
-                        color: #111;
+                        resize: none;
                     }
-                    .TextArea:focus{
-                        border: 1px solid #111;
-                    }
-                    .TextArea::placeholder{
-                        color: rgba(0, 0, 0, 0.25);
-                    }
-                    .TextArea:focus::placeholder{
-                        color: #111;
-                    } */
                     .InputButton{
+                        width: var(--Width-Relative-Max);
+
+                        padding: var(--Padding-Regular);
+                        margin-top: var(--Margin-Regular);
+
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 100%;
-                        padding: 1rem;
-                        margin-top: 1rem;
-                        font-weight: var(--Font-Weight-Bold);
+
                         background-color: var(--Black);
-                        cursor: pointer;
-                        border: 1px solid var(--Black);
+                        
+                        font-weight: var(--Font-Weight-Bold);
+
                         color: var(--White);
+
+                        border: 1px solid var(--Black);
+
+                        cursor: pointer;
                     }
                     .InputButton:hover{
-                        color: var(--Black);
                         background-color: var(--White);
+
+                        color: var(--Black);
                     }
                 .Groups:last-child{
                     margin-bottom: 0;
                 }
             .Contact{
-                padding: 2.0rem;
-                margin-bottom: 2rem;
+                width: var(--Width-Relative-Max);
+                height: var(--Height-Relative-Max);
+
+                padding: var(--Padding-Medium);
+                margin-bottom: var(--Margin-Medium);
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
                 background-color: var(--White);
-                width: 100%;
-                height: 100%;
             }
                 .Email{
-                    text-align: center;
+                    width: var(--Width-Relative-Max);
+                    height: var(--Height-Relative-Max);
+
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    text-align: center;
+
                     border: 1px solid var(--Black);
-                    width: 100%;
-                    height: 100%;
                 }
                     .EmailText{
-                        padding: 1rem;
-                        height: 100%;
-                        width: 100%;
-                        text-align: center;
+                        width: var(--Width-Relative-Max);
+                        height: var(--Height-Relative-Max);
+
+                        padding: var(--Padding-Regular);
+
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        
+                        text-align: center;
                     }
                     .Email>i{
-                        cursor: pointer;
-                        padding: 1rem;
-                        height: 100%;
-                        color: var(--Black);
-                        background-color: var(--White);
-                        text-align: center;
+                        padding: var(--Padding-Regular);
+                        height: var(--Height-Relative-Max);
+
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        
+                        background-color: var(--White);
+
+                        text-align: center;
+
+                        color: var(--Black);
+
+                        cursor: pointer;
                     }
                     .Email>i:hover{
-                        color: var(--White);
                         background-color: var(--Black);
+
+                        color: var(--White);
                     }
             .SocialMidias{
+                width: var(--Width-Relative-Max);
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
                 align-items: center;
-                background-color: var(--White);
-                width: 100%;
+
                 background-color: var(--Black);
             }
                 .Icons{
+                    width: var(--Width-Relative-Max);
+
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 100%;
                 }
                     .Icons>i{
-                        color: var(--White);
-                        padding: 1rem 2rem;
+                        padding: var(--Padding-Regular) var(--Padding-Medium);
+
                         font-size: var(--Font-Size-SubTitle);
                         line-height: var(--Line-Height-SubTitle);
+                        color: var(--White);
                     }
                     .Icons>i:hover{
-                        color: var(--Black);
                         background-color: var(--White);
-                        /* transform: translateY(-15%); */
+
+                        color: var(--Black);
                     }
         .Footer{
-            width: 100%;
-            text-align: center;
-            padding: 1.0rem;
+            width: var(--Width-Relative-Max);
+
+            padding: var(--Padding-Regular);
+
             background-color: var(--Black);
+
+            text-align: center;
         }
             .Copyright{
                 font-size: var(--Font-Size-Small);
                 line-height: var(--Line-Height-Small);
+                
                 color: var(--White);
             } 

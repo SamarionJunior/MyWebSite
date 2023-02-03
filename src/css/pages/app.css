@@ -5,8 +5,8 @@
 @import url("../view/Contact.css");
 
 .App{
-    width: 100%;
-    min-height: 100vh;
+    width: var(--Width-Relative-Max);
+    min-height: var(--Width-Absolute-Max);
     display: flex;
     flex-direction: column;
     align-items: flex-end;

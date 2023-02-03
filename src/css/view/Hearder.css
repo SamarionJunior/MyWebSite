@@ -1,18 +1,22 @@
         .HeaderLinks{
-            top: 0;
-            left: 5rem;
             position: fixed;
-            height: 100%;
-            max-height: 5rem;
+            top: 0;
+            left: var(--Width-Lateral);
+
+            height: var(--Height-Relative-Max);
+            max-height: var(--Height-Lateral);
+
             display: flex;
             justify-content: flex-start;
             align-items: center;
+
             z-index: 999;
         }
         
             .HeaderLink{
-                width: 5rem;
-                height: 100%;
+                width: var(--Width-Lateral);
+                height: var(--Height-Relative-Max);
+                
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
