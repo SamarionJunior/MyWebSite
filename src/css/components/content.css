@@ -1,0 +1,11 @@
+.Content{
+    width: calc(var(--Width-Relative-Max) - var(--Margin-Large));
+    height: var(--Height-Absolute-Max);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}

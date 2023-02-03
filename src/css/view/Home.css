@@ -42,12 +42,6 @@
         .HomeTitle{
             width: var(--Width-Relative-Max);
 
-            font-family: var(--Font-Family-Display);
-            font-weight: var(--Font-Weight-Black);
-            font-size: var(--Font-Size-Display);
-            letter-spacing: var(--Letter-Spacing-Display);
-            line-height: var(--Line-Height-Display);
-
             color: var(--White);
 
             text-align: left;
@@ -62,11 +56,6 @@
 
             margin: var(--Margin-Regular);
 
-            font-family: var(--Font-Family-Title);
-            font-size: var(--Font-Size-Title);
-            letter-spacing: var(--Letter-Spacing-Title);
-            line-height: var(--Line-Height-Title);
-
             color: var(--White);
 
             text-align: center;
@@ -79,44 +68,12 @@
             width: var(--Width-Relative-Max);
 
             margin-top: var(--Margin-Regular);
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
             .HomeButton{
                 width: calc(50% - 1.0rem);
-
-                padding: var(--Padding-Regular);
-
-                display: inline;
-
-                background-color: var(--White);
-
-                font-weight: bold;
-                
-                text-align: center;
-
-                border: 1px solid var(--White);
-
-                cursor: pointer;
             }
 
             .HomeButton:first-of-type{
                 margin-right: var(--Margin-Medium);
-            }
-
-            .HomeButton:hover{
-                background-color: var(--Black);
-
-                color: var(--White);
-            }
-
-            .HomeButton:active{
-                background-color: var(--White);
-                
-                color: var(--Black);
-
-                border: 1px solid var(--White);
             }

@@ -54,6 +54,9 @@
     --Width-Relative-Max: 100%;
     --Height-Relative-Max: 100%;
 
+    --Width-Relative-Medium: 50%;
+    --Height-Relative-Medium: 50%;
+
     --Width-Absolute-Max: 100vw;
     --Height-Absolute-Max: 100vh;
     

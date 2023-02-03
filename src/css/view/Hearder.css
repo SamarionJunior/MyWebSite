@@ -1,36 +1,14 @@
-        .HeaderLinks{
-            position: fixed;
-            top: 0;
-            left: var(--Width-Lateral);
+.HeaderLinks{
+position: fixed;
+top: 0;
+left: var(--Width-Lateral);
 
-            height: var(--Height-Relative-Max);
-            max-height: var(--Height-Lateral);
+height: var(--Height-Relative-Max);
+max-height: var(--Height-Lateral);
 
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+display: flex;
+justify-content: flex-start;
+align-items: center;
 
-            z-index: 999;
-        }
-        
-            .HeaderLink{
-                width: var(--Width-Lateral);
-                height: var(--Height-Relative-Max);
-                
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-            }
-        
-            .HeaderLink:hover{
-                background-color: var(--White);
-            }
-
-                .HeaderLink > i{
-                    color: var(--White);
-                }
-
-                .HeaderLink:hover > i{
-                    color: var(--Black);
-                }
+z-index: 999;
+}

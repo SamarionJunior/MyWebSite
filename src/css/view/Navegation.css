@@ -7,44 +7,5 @@
     max-width: var(--Width-Lateral);
     height: var(--Height-Absolute-Max);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     background-color: var(--White);
-}
-
-    .ContentLink{
-        width: var(--Width-Relative-Max);
-        height: var(--Height-Lateral);
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .ContentLink:hover{
-        background-color: var(--Black);
-    }
-
-        .ContentLink > i{
-            color: var(--Black);
-        }
-
-        .ContentLink:hover > i{
-            color: var(--White);
-        }
-
-.Content{
-    width: calc(var(--Width-Relative-Max) - var(--Margin-Large));
-    height: var(--Height-Absolute-Max);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    overflow: hidden;
 }

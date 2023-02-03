@@ -6,18 +6,8 @@
         width: var(--Width-Relative-Max);
         height: var(--Height-Relative-Max);
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         flex-grow: 1;
     }
-        .InformationCard{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
             .Form{
                 width: var(--Width-Relative-Max);
                 max-width: 664px;
@@ -44,7 +34,7 @@
                         display: flex;
                     }
                     .InputText{
-                        padding: var(--Padding-Small);
+                        padding: var(--Padding-Regular);
 
                         width: var(--Width-Relative-Max);
 
@@ -53,7 +43,7 @@
                         background-color: var(--Light-Gray);
                     }
                     .TextArea{
-                        padding: var(--Padding-Small);
+                        padding: var(--Padding-Regular);
 
                         width: var(--Width-Relative-Max);
                         height: var(--Height-Relative-Max);
@@ -68,27 +58,7 @@
                     .InputButton{
                         width: var(--Width-Relative-Max);
 
-                        padding: var(--Padding-Regular);
                         margin-top: var(--Margin-Regular);
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        background-color: var(--Black);
-                        
-                        font-weight: var(--Font-Weight-Bold);
-
-                        color: var(--White);
-
-                        border: 1px solid var(--Black);
-
-                        cursor: pointer;
-                    }
-                    .InputButton:hover{
-                        background-color: var(--White);
-
-                        color: var(--Black);
                     }
                 .Groups:last-child{
                     margin-bottom: 0;
@@ -100,20 +70,11 @@
                 padding: var(--Padding-Medium);
                 margin-bottom: var(--Margin-Medium);
 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
                 background-color: var(--White);
             }
                 .Email{
                     width: var(--Width-Relative-Max);
                     height: var(--Height-Relative-Max);
-
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
 
                     text-align: center;
 
@@ -124,20 +85,12 @@
                         height: var(--Height-Relative-Max);
 
                         padding: var(--Padding-Regular);
-
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         
                         text-align: center;
                     }
                     .Email>i{
                         padding: var(--Padding-Regular);
                         height: var(--Height-Relative-Max);
-
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         
                         background-color: var(--White);
 
@@ -155,20 +108,10 @@
             .SocialMidias{
                 width: var(--Width-Relative-Max);
 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-                align-items: center;
-
                 background-color: var(--Black);
             }
                 .Icons{
                     width: var(--Width-Relative-Max);
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                 }
                     .Icons>i{
                         padding: var(--Padding-Regular) var(--Padding-Medium);
@@ -191,9 +134,3 @@
 
             text-align: center;
         }
-            .Copyright{
-                font-size: var(--Font-Size-Small);
-                line-height: var(--Line-Height-Small);
-                
-                color: var(--White);
-            } 

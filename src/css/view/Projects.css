@@ -19,10 +19,6 @@
         max-height: 660px;
 
         margin: var(--Margin-Medium);
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
         
         overflow: auto;
     }
@@ -35,11 +31,6 @@
             min-height: 280px;
 
             margin: var(--Margin-Medium);
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
             background-color: var(--White);
 
@@ -85,11 +76,6 @@
                 background-color: var(--White);
             }
                 .CardTitle{
-                    font-family: var(--Font-Family-Title);
-                    font-size: var(--Font-Size-SubTitle);
-                    font-weight: var(--Font-Weight-Bold);
-                    line-height: var(--Line-Height-SubTitle);
-
                     color: var(--Dark-Gray);
                 }
                 .Tags{
@@ -100,20 +86,6 @@
                     display: flex;
                     flex-wrap: wrap;
                 }
-                    .Tag{
-                        padding: 0 var(--Padding-Regular);
-                        margin-right: var(--Margin-Small);
-                        margin-top: var(--Margin-Small);
-
-                        font-size: var(--Font-Size-Small);
-                        line-height: var(--Line-Height-Small);
-
-                        border: 1px solid var(--Black);
-                        border-radius: 1.0rem;
-                    }
-                    .Tag:last-of-type{
-                        margin-right: 0;
-                    }
                 .CardParagraph{
                     flex-grow: 1;
 
@@ -133,33 +105,8 @@
                 margin: 0 var(--Margin-Medium);
                 width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
 
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-
                 border-top: 1px solid var(--Medium-Gray);
             }
-                .ProjectButton{
-                    padding: 0 var(--Padding-Regular);
-                    margin-bottom: var(--Margin-Small);
-
-                    display: inline;
-
-                    font-weight: var(--Font-Weight-Bold);
-
-                    text-transform: uppercase;
-                    text-align: center;
-
-                    color: var(--Medium-Gray);
-
-                    cursor: pointer;
-                }
-                .ProjectButton:hover{
-                    text-decoration: underline;
-                    
-                    color: var(--Black);
-                }
 
     /* .Slider{
         width: 100%;
