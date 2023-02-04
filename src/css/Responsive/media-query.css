@@ -18,6 +18,24 @@
         font-size: var(--Font-Size-Root-Tablet);
     }
 
+        .HeaderLinks{
+
+        }
+
+        #MenuDesktop{
+            display: none;
+        }
+
+        #BurgerMenu{
+            display: flex;
+
+            z-index: 3000;
+        }
+
+        .Content{
+            width: var(--Width-Relative-Max);
+        }
+
         .Home{
             align-items: center;
         }

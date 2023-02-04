@@ -54,3 +54,25 @@
     
     color: var(--Black);
 }
+
+#BurgerMenu{
+    width: var(--Width-Lateral);
+    height: var(--Height-Lateral);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    z-index: 3000;
+
+    background-color: transparent;
+}
+#MenuCloseIcon{
+    color: white;
+}
+
+#MenuOpenIcon{
+    color: black;
+}
