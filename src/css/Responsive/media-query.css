@@ -37,10 +37,6 @@
             align-items: center;
         }
 
-        .Section{
-            margin-left: 0;
-        }
-
         .Display{
             font-size: calc(var(--Font-Size-Display) / 100 * 60);
             letter-spacing:  calc(var(--Letter-Spacing-Display) / 100 * 60);
@@ -68,14 +64,6 @@
     html{
         font-size: var(--Font-Size-Root-Mobile);
     }
-
-        .Home{
-            align-items: center;
-        }
-
-        .Section{
-            margin-left: 0;
-        }
 
         .Display{
             font-size: calc(var(--Font-Size-Display) / 100 * 40);
@@ -128,14 +116,6 @@
     html{
         font-size: var(--Font-Size-Root-Mobile);
     }
-
-        .Home{
-            align-items: center;
-        }
-
-        .Section{
-            margin-left: 0;
-        }
 
         .Display{
             font-size: calc(var(--Font-Size-Display) / 100 * 30);

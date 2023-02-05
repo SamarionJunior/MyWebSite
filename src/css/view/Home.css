@@ -1,13 +1,23 @@
+#Content1{
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+
+    overflow: auto;
+}
+
 .Home{
     width: var(--Width-Relative-Max);
     height: var(--Height-Relative-Max);
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 
     position: relative;
+
+    overflow: auto;
 }
 
 .Home::before{
@@ -28,15 +38,36 @@
     filter: brightness(80%);
 }
 
+.Scroll{
+    width: 100%;
+
+    overflow: auto;
+    
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    max-height: 100vh;
+
+}
+
     .Section{
         position: relative;
 
-        margin-left: var(--Margin-Large);
+        width: auto;
+
+        /* margin: var(--Margin-Regular);
+        margin-left: var(--Margin-Large); */
+        margin: var(--Margin-Large);
         
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        flex-grow: 1;
     }
 
         .HomeTitle{
@@ -65,13 +96,17 @@
         }
 
         .HomeButtons{
-            width: var(--Width-Relative-Max);
+            width: 100%;
+            /* width: var(--Width-Relative-Max); */
+
+            display: inline-block;
 
             margin-top: var(--Margin-Regular);
         }
 
             .HomeButton{
-                width: calc(50% - 1.0rem);
+                width: calc(50% - var(--Margin-Medium));
+                display: inline-block;
             }
 
             .HomeButton:first-of-type{

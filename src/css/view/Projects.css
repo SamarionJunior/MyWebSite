@@ -12,141 +12,125 @@
         top: 0; left: 0;
         width: 100%; height: 100%;
     } */
+
     .Pojects{
-        width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
-        max-width: 1920px;
-        min-height: 480px;
-        max-height: 660px;
+        width: var(--Width-Relative-Max);
 
-        margin: var(--Margin-Medium);
+        height: 100%;
         
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
-        .Project{
-            width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
-            max-width: 480px;
-            min-width: 280px;
-            height: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
-            max-height: 660px;
-            min-height: 280px;
 
-            margin: var(--Margin-Medium);
+        
+        #Scroll2{
+            width: 100%;
+        
+            overflow-y: auto;
+            overflow-x: hidden;
+            
+            height: 100%;
 
-            background-color: var(--White);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
 
-            z-index: 2000;
+            max-height: 100vh;
         }
-            .Thumbnail{
-                position: relative;
 
-                width: var(--Width-Relative-Max);
-                max-width: 660px;
+            .Project{
+                /* width: calc(var(--Width-Relative-Max) - (var(--Margin-Large) * 2));
+                max-width: 480px;
                 min-width: 280px;
-                height: auto;
-                max-height: calc(660px / 3 * 2);
-                min-height: calc(280px / 3 * 2);
-            }
-            .Thumbnail::before{
-                content: "";
+                height: calc(var(--Width-Relative-Max) - (var(--Margin-Large) * 2));
+                max-height: 660px;
+                min-height: 280px; */
+                width: 280px;
+                height: calc(140px + 280 + 140);
 
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                width: var(--Width-Relative-Max);
-                height: var(--Height-Relative-Max);
-
-                background-image: url("../../../assets/images/card/todolist.jpg");
-                background-size: cover;
-                background-position: top left;
-                background-repeat: no-repeat;
-            }
-            .Description{
-                width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
-                min-width: 100px;
-                height: var(--Height-Relative-Max);
-                min-height: 100px;
-
-                margin: var(--Margin-Medium);
-
-                display: flex;
-                flex-direction: column;
-                flex-grow: 1;
+                margin: var(--Margin-Large);
 
                 background-color: var(--White);
-            }
-                .CardTitle{
-                    color: var(--Dark-Gray);
-                }
-                .Tags{
-                    width: var(--Width-Relative-Max);
 
-                    margin-bottom: var(--Margin-Medium);
+                z-index: 2000;
+            }
+                .Thumbnail{
+                    position: relative;
+
+                    /* width: var(--Width-Relative-Max);
+                    max-width: 660px;
+                    min-width: 280px; */
+                    /* height: auto;
+                    max-height: calc(660px / 3 * 2);
+                    min-height: calc(50px / 3 * 2); */
+                    width: 280px;
+                    height: 140px;
+                }
+                .Thumbnail::before{
+                    content: "";
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: var(--Width-Relative-Max);
+                    height: var(--Height-Relative-Max);
+
+                    background-image: url("../../../assets/images/card/todolist.jpg");
+                    background-size: cover;
+                    background-position: top left;
+                    background-repeat: no-repeat;
+                }
+                .Description{
+                    /* width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
+                    min-width: 100px;
+                    height: var(--Height-Relative-Max);
+                    min-height: 100px; */
+                    width: calc(280px - 5rem);
+                    height: 280px;
+
+                    margin: var(--Margin-Medium);
+
+                    display: flex;
+                    flex-direction: column;
+
+                    background-color: var(--White);
+                }
+                    .CardTitle{
+                        color: var(--Dark-Gray);
+                    }
+                    .Tags{
+                        width: var(--Width-Relative-Max);
+
+                        margin-bottom: var(--Margin-Medium);
+
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .CardParagraph{
+                        flex-grow: 1;
+
+                        background-color: var(--White);
+
+                        text-align: start;
+                        
+                        opacity: 85%;
+
+                        overflow: auto;
+                    }
+                .ProjectButtons{
+
+                    padding: var(--Padding-Medium) 0;
+                    padding-bottom: var(--Padding-Default);
+                    margin: 0 var(--Margin-Medium);
+
+                    /* width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2)); */
+                    width: calc(280px - 5rem);
+                    height: 140px;
 
                     display: flex;
                     flex-wrap: wrap;
+
+                    border-top: 1px solid var(--Medium-Gray);
                 }
-                .CardParagraph{
-                    flex-grow: 1;
-
-                    background-color: var(--White);
-
-                    text-align: start;
-                    
-                    opacity: 85%;
-
-                    overflow: auto;
-                }
-            .ProjectButtons{
-                height: auto;
-
-                padding: var(--Padding-Medium) 0;
-                padding-bottom: var(--Padding-Default);
-                margin: 0 var(--Margin-Medium);
-                width: calc(var(--Width-Relative-Max) - (var(--Margin-Medium) * 2));
-
-                display: flex;
-                flex-wrap: wrap;
-
-                border-top: 1px solid var(--Medium-Gray);
-            }
-
-    /* .Slider{
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-        .SliderLinks{
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            max-height: 5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-            .SliderLink{
-                width: 5rem;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-        .Scroll{
-            display: flex;
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-            height: calc(100% - 5rem);
-        }
-
-            .Slide{
-                min-width: 100%;
-                height: 100%;
-            } */

@@ -1,14 +1,21 @@
 #Content3{
     justify-content: space-between;
     position: relative;
+    min-height: var(--Height-Relative-Max);
+    overflow-y: auto;
     
 }
     .Information{
         width: var(--Width-Relative-Max);
-        height: var(--Height-Relative-Max);
+        /* min-height: var(--Height-Relative-Max);
 
-        flex-grow: 1;
+        flex-grow: 1; */
+        justify-content: flex-start;
     }
+        .InformationCard{
+            flex-grow: 1;
+            margin: var(--Margin-Large);
+        }
             .Form{
                 width: var(--Width-Relative-Max);
                 max-width: 664px;
@@ -66,7 +73,7 @@
                 }
             .Contact{
                 width: var(--Width-Relative-Max);
-                height: var(--Height-Relative-Max);
+                /* height: var(--Height-Relative-Max); */
 
                 padding: var(--Padding-Medium);
                 margin-bottom: var(--Margin-Medium);
