@@ -1,0 +1,149 @@
+@import url("./variables.css");
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--Font-Family-Normal);
+
+    line-height: 0;
+
+    text-decoration: 0;
+
+    color: var(--Dark-Gray);
+
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+html{
+    width: var(--Width-Relative-Max);
+    height: var(--Height-Absolute-Max);
+    font-size: var(--Font-Size-Root);
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+
+    overflow: hidden;
+}
+
+    body{
+        width: var(--Width-Relative-Max);
+        height: var(--Height-Relative-Max);
+
+        overflow: hidden;
+    }
+
+    body *{
+        font-size: var(--Font-Size-Normal);
+        letter-spacing: var(--Letter-Spacing-Normal);
+        line-height: var(--Line-Height-Normal);
+
+        transition: var(--Transition);
+    }
+    
+        .App{
+            width: var(--Width-Relative-Max);
+            min-height: var(--Height-Absolute-Max);
+            max-height: (var(--Height-Absolute-Max) * 3);
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+        
+            background-color: var(--Light-Gray);
+
+            overflow: hidden;
+        }
+
+            .Links{
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #Navegation{
+                top: 0;
+                left: 0;
+                background: white;
+                width: 5rem;
+                height: 100%;
+                flex-direction: column;
+            }
+
+                .Link{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #Link-Home, #Link-Project, #Link-Contact {
+                    width: 100%;
+                    height: 5rem;
+                }
+
+                #Link-Home:hover, #Link-Project:hover, #Link-Contact:hover {
+                    background-color: black;
+                    color: white;
+                }
+
+            .View{
+                width: calc(100% - 5rem);
+                height: var(--Height-Absolute-Max);
+            }
+
+                .Scroll{
+                    width: 100%;
+                    height: var(--Height-Absolute-Max);
+                    overflow-y: auto;
+                }
+
+                #Home{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+
+                    .Row{
+                        min-width: 100%;
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                    }
+
+.cube{
+    display: inline-block;
+    /* padding: 4rem; */
+    /* height: auto; */
+    margin: 5rem;
+    background-color: red;
+    font-size: 50pt;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    background-color: black;
+}
+
+.buttons > button{
+    width: calc(50% - 10px);
+}
+
+.buttons > button:first-of-type{
+    margin-right: 20px;
+}
+
+/* .cube{
+    display: flex;
+    min-width: 300px;
+    min-height: 300px;
+    margin: 5rem;
+    background-color: red;
+} */

@@ -17,7 +17,7 @@
 
 html{
     font-size: var(--Font-Size-Root);
-    overflow: hidden;
+    /* overflow: hidden; */
     scroll-behavior: smooth;
 }
 

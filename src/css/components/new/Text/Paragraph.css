@@ -1,0 +1,12 @@
+.CardParagraph{
+    flex-grow: 1;
+
+    background-color: var(--White);
+
+    text-align: start;
+    
+    opacity: 85%;
+
+    overflow: auto;
+}
+

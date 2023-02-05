@@ -6,10 +6,12 @@
 
 .App{
     width: var(--Width-Relative-Max);
+    height: 100%;
     min-height: var(--Width-Absolute-Max);
     
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-end;
 
     background-color: var(--Light-Gray);
