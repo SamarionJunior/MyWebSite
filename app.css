@@ -15,240 +15,266 @@
     border: 0;
     box-sizing: border-box;
     outline: 0;
-}
 
-html{
-    width: var(--Width-Relative-Max);
-    height: var(--Height-Absolute-Max);
-    font-size: var(--Font-Size-Root);
-    /* overflow: hidden; */
     scroll-behavior: smooth;
 
-    overflow: hidden;
+    transition: var(--Transition);
 }
 
-    body{
+    html{
         width: var(--Width-Relative-Max);
-        height: var(--Height-Relative-Max);
+        height: var(--Height-Absolute-Max);
+        font-size: var(--Font-Size-Root);
 
         overflow: hidden;
     }
 
-    body *{
-        font-size: var(--Font-Size-Normal);
-        letter-spacing: var(--Letter-Spacing-Normal);
-        line-height: var(--Line-Height-Normal);
-
-        transition: var(--Transition);
-    }
-    
-        .App{
+        body{
             width: var(--Width-Relative-Max);
-            min-width: 320px;
-            min-height: var(--Height-Absolute-Max);
-            max-height: (var(--Height-Absolute-Max) * 3);
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-end;
-        
-            background-color: var(--Light-Gray);
+            height: var(--Height-Relative-Max);
 
             overflow: hidden;
         }
 
-            .Links{
-                position: fixed;
+        body *{
+            font-size: var(--Font-Size-Normal);
+            letter-spacing: var(--Letter-Spacing-Normal);
+            line-height: var(--Line-Height-Normal);
+        }
+        
+            .App{
+                width: var(--Width-Relative-Max);
+                min-width: 320px;
+                min-height: var(--Height-Absolute-Max);
+                max-height: (var(--Height-Absolute-Max) * 3);
+                
                 display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            #Navegation{
-                top: 0;
-                left: 0;
-                background: white;
-                width: 5rem;
-                min-width: 5rem;
-                height: 100%;
                 flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+            
+                background-color: var(--Light-Gray);
+
+                overflow: hidden;
+                background-color: #eee;
             }
 
-                .Link{
+                .Links{
+                    position: fixed;
                     display: flex;
-                    flex-direction: row;
                     justify-content: center;
                     align-items: center;
                 }
 
-                #Link-Home, #Link-Project, #Link-Contact {
-                    width: 100%;
-                    height: 5rem;
-                }
-
-                #Link-Home:hover, #Link-Project:hover, #Link-Contact:hover {
-                    background-color: black;
-                    color: white;
-                }
-
-            .View{
-                width: calc(100% - 5rem);
-                min-width: calc(320px - 5rem);
-                height: var(--Height-Absolute-Max);
-                overflow: auto;
-            }
-
-                .Scroll{
-                    width: 100%;
-                    height: var(--Height-Absolute-Max);
-                    overflow-y: auto;
-                }
-
-                #Home{
-                    display: flex;
+                #Navegation{
+                    top: 0;
+                    left: 0;
+                    background: white;
+                    width: 5rem;
+                    min-width: 5rem;
+                    height: 100%;
                     flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
                 }
 
-                    .Row{
-                        min-width: 100%;
-                        flex-grow: 1;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: flex-start;
-                    }
-            
-            #ProjectView{
-                position: relative;
-            }
-
-                #Project{
-                    height: calc(100vh - 5rem);
-                    min-width: calc(100vw - 5rem);
-                    min-height: calc(100% - 5rem);
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    overflow: hidden;
-                }
-
-                    .ProjectRow{
-                        /* height: 100vh; */
-                        width: 100%;
-                        height: 100%;
-                        flex-grow: 1;
+                    .Link{
                         display: flex;
                         flex-direction: row;
-                        justify-content: flex-start;
+                        justify-content: center;
                         align-items: center;
                     }
 
-                #Slider{
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    background: white;
-                    width: 100%;
-                    height: 5rem;
-                    flex-direction: row;
-                }
-
-                    .Link-Slide{
-                        width: 5rem;
-                        height: 100%;
+                    #Link-Home, #Link-Project, #Link-Contact {
+                        width: 100%;
+                        height: 5rem;
                     }
 
-                    .Link-Slide:hover{
+                    #Link-Home:hover, #Link-Project:hover, #Link-Contact:hover {
                         background-color: black;
                         color: white;
                     }
 
-                #Contact{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
+                .View{
+                    width: calc(100% - 5rem);
+                    min-width: calc(320px - 5rem);
+                    height: var(--Height-Absolute-Max);
+                    overflow: auto;
                 }
 
-                    #HomeRow{
-                        flex-grow: 1;
-                        align-items: center;
-                    }
-
-                    .Footer{
+                    .Scroll{
                         width: 100%;
-                        padding: 5rem;
-                        background-color: black;
+                        height: var(--Height-Absolute-Max);
+                        overflow-y: auto;
                     }
 
+                    #Home{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+
+                        .Row{
+                            min-width: 100%;
+                            flex-grow: 1;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                        }
+
+                            .Placard{
+                                display: inline-block;
+                                /* padding: 4rem; */
+                                /* height: auto; */
+                                margin-left: 5rem;
+                            }
+
+                                .Placard > h1{
+                                    font-family: var(--Font-Family-Display);
+                                    font-size: var(--Font-Size-Display);
+                                    letter-spacing: var(--Letter-Spacing-Display);
+                                    line-height: var(--Line-Height-Display);
+                                    font-weight: 900;
+                                }
+
+                                .Placard > h3{
+                                    font-family: var(--Font-Family-Title);
+                                    font-size: var(--Font-Size-Title);
+                                    letter-spacing: var(--Letter-Spacing-Title);
+                                    line-height: var(--Line-Height-Title);
+                                    font-weight: bold;
+                                    text-align: center;
+                                    margin: 2rem 0 3rem 0;
+                                }
+                        
+                                .buttons{
+                                    width: 100%;
+                                    display: flex;
+                                }
+                            
+                                    .buttons > a{
+                                        font-weight: bold;
+                                        width: calc(50% - 10px);
+                                        padding: 1rem;
+                                        text-transform: uppercase;
+                                        background-color: white;
+                                        text-align: center;
+                                    }
+
+                                    .buttons > a:hover{
+                                        font-weight: bold;
+                                        width: calc(50% - 10px);
+                                        padding: 1rem;
+                                        text-transform: uppercase;
+                                        background-color: black;
+                                        color: white;
+                                    }
+                                
+                                    .buttons > a:first-of-type{
+                                        margin-right: 20px;
+                                    }
+
+                    #Project{
+                        max-width: calc(100vw - 5rem);
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: flex-start;
+                        overflow: auto;
+                    }
+
+                        .ProjectRow{
+                            min-width: 0;
+                            width: auto;
+                            height: auto;
+                            flex-grow: 0;
+                            display: inline-block;
+                        }
+
+                    #Contact{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+
+                        #HomeRow{
+                            flex-grow: 1;
+                            align-items: center;
+                        }
+
+                        .Footer{
+                            width: 100%;
+                            padding: 5rem;
+                            background-color: black;
+                        }
 
 
 
 
 
-.Placard{
-    display: inline-block;
-    /* padding: 4rem; */
-    /* height: auto; */
-    margin: 5rem;
-    background-color: red;
-    font-size: 50pt;
-}
-
-.buttons{
-    width: 100%;
-    display: flex;
-    background-color: black;
-}
-
-.buttons > button{
-    width: calc(50% - 10px);
-}
-
-.buttons > button:first-of-type{
-    margin-right: 20px;
-}
 
 
 
 
-.Painel{
-    margin: 5rem;
-    width: calc(100% - 10rem);
-    height: calc(100% - 10rem);
-    background-color: #eee;
-}
-
-.Information{
-    display: flex;
-    margin: 5rem;
-    min-width: 600px;
-    min-height: 600px;
-    background-color: black;
-}
 
 
 
-.Form{
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    min-height: 300px;
-    margin: 5rem;
-    background-color: red;
-}
+    .Painel{
+        margin: 5rem;
+        min-width: 360px;
+        min-height: calc(360px * 3 / 2);
+        background-color: #eee;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.retangulo{
-    display: inline-block;
-    min-width: 300px;
-    min-height: 100px;
-    margin: 1rem;
-    background-color: yellow;
-}
+    .Thumbnail, .Description{
+        display: flex;
+        width: 100%;
+        height: calc(360px * 3 / 2 / 2);
+        position: relative;
+    }
+
+    .Thumbnail::before{
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-image: url("./assets/images/card/todolist.jpg");
+        background-size: cover;
+        background-position: top left;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+
+
+    .Form{
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        min-height: 300px;
+        margin: 5rem;
+        background-color: red;
+    }
+
+    .retangulo{
+        display: inline-block;
+        min-width: 300px;
+        min-height: 100px;
+        margin: 1rem;
+        background-color: yellow;
+    }
 
 /* .cube{
     display: inline-block;
