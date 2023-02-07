@@ -25,15 +25,11 @@
         width: var(--Width-Relative-Max);
         height: var(--Height-Absolute-Max);
         font-size: var(--Font-Size-Root);
-
-        overflow: hidden;
     }
 
         body{
             width: var(--Width-Relative-Max);
             height: var(--Height-Relative-Max);
-
-            overflow: hidden;
         }
 
         body *{
@@ -44,19 +40,18 @@
         
             .App{
                 width: var(--Width-Relative-Max);
-                min-width: 320px;
                 min-height: var(--Height-Absolute-Max);
-                max-height: (var(--Height-Absolute-Max) * 3);
                 
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                align-items: flex-end;
+                align-items: center;
             
                 background-color: var(--Light-Gray);
 
-                overflow: hidden;
                 background-color: #eee;
+
+                position: relative;
             }
 
                 .Links{
@@ -64,16 +59,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                }
-
-                #Navegation{
-                    top: 0;
-                    left: 0;
-                    background: white;
-                    width: 5rem;
-                    min-width: 5rem;
-                    height: 100%;
-                    flex-direction: column;
+                    z-index: 999;
                 }
 
                     .Link{
@@ -83,9 +69,23 @@
                         align-items: center;
                     }
 
+                #Navegation{
+                    top: 0;
+                    background: white;
+                    width: 100%;
+                    min-width: 320px;
+                    max-width: 1920px;
+                    height: 5rem;
+                    min-height: 5rem;
+                    justify-content: flex-end;
+
+                    /* Desktop */
+                    padding-right: 5rem;
+                }
+
                     #Link-Home, #Link-Project, #Link-Contact {
-                        width: 100%;
-                        height: 5rem;
+                        width: 5rem;
+                        height: 100%;
                     }
 
                     #Link-Home:hover, #Link-Project:hover, #Link-Contact:hover {
@@ -94,187 +94,315 @@
                     }
 
                 .View{
-                    width: calc(100% - 5rem);
-                    min-width: calc(320px - 5rem);
-                    height: var(--Height-Absolute-Max);
-                    overflow: auto;
+                    width: calc(100%);
+                    min-width: 320px;
+                    max-width: 1920px;
+                    height: 100%;
+                    min-height: var(--Height-Absolute-Max);
                 }
 
-                    .Scroll{
-                        width: 100%;
-                        height: var(--Height-Absolute-Max);
-                        overflow-y: auto;
+                #Home{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                    .Placard{
+                        display: inline-block;
+                        margin-left: 5rem;
                     }
 
-                    #Home{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                    }
-
-                        .Row{
-                            min-width: 100%;
-                            flex-grow: 1;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: flex-start;
+                        .Placard > h1{
+                            font-family: var(--Font-Family-Display);
+                            font-size: var(--Font-Size-Display);
+                            letter-spacing: var(--Letter-Spacing-Display);
+                            line-height: var(--Line-Height-Display);
+                            font-weight: 900;
                         }
 
-                            .Placard{
-                                display: inline-block;
-                                /* padding: 4rem; */
-                                /* height: auto; */
-                                margin-left: 5rem;
+                        .Placard > h3{
+                            font-family: var(--Font-Family-Title);
+                            font-size: var(--Font-Size-Title);
+                            letter-spacing: var(--Letter-Spacing-Title);
+                            line-height: var(--Line-Height-Title);
+                            font-weight: bold;
+                            text-align: center;
+                            margin: 2rem 0 3rem 0;
+                        }
+                
+                        .buttons{
+                            width: 100%;
+                            display: flex;
+                            margin-bottom: 2rem;
+                        }
+                    
+                            .buttons > a{
+                                font-weight: bold;
+                                width: calc(50% - 2rem);
+                                padding: 1.5rem;
+                                text-transform: uppercase;
+                                background-color: white;
+                                text-align: center;
                             }
 
-                                .Placard > h1{
-                                    font-family: var(--Font-Family-Display);
-                                    font-size: var(--Font-Size-Display);
-                                    letter-spacing: var(--Letter-Spacing-Display);
-                                    line-height: var(--Line-Height-Display);
-                                    font-weight: 900;
-                                }
+                            .buttons > a:hover{
+                                background-color: black;
+                                color: white;
+                            }
 
-                                .Placard > h3{
-                                    font-family: var(--Font-Family-Title);
-                                    font-size: var(--Font-Size-Title);
-                                    letter-spacing: var(--Letter-Spacing-Title);
-                                    line-height: var(--Line-Height-Title);
-                                    font-weight: bold;
-                                    text-align: center;
-                                    margin: 2rem 0 3rem 0;
-                                }
-                        
-                                .buttons{
-                                    width: 100%;
-                                    display: flex;
-                                }
-                            
-                                    .buttons > a{
-                                        font-weight: bold;
-                                        width: calc(50% - 10px);
-                                        padding: 1rem;
-                                        text-transform: uppercase;
-                                        background-color: white;
-                                        text-align: center;
-                                    }
+                            .buttons > a:first-of-type{
+                                margin-right: 4rem;
+                            }
 
-                                    .buttons > a:hover{
-                                        font-weight: bold;
-                                        width: calc(50% - 10px);
-                                        padding: 1rem;
-                                        text-transform: uppercase;
-                                        background-color: black;
-                                        color: white;
-                                    }
-                                
-                                    .buttons > a:first-of-type{
-                                        margin-right: 20px;
-                                    }
-
-                    #Project{
-                        max-width: calc(100vw - 5rem);
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: flex-start;
-                        overflow: auto;
-                    }
-
-                        .ProjectRow{
-                            min-width: 0;
-                            width: auto;
-                            height: auto;
-                            flex-grow: 0;
-                            display: inline-block;
-                        }
-
-                    #Contact{
+                #Project{
+                    padding-top: 6.5rem;
+                    padding-bottom: 6.5rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    .Painel{
+                        margin: 1.5rem;
+                        width: 360px;
+                        height: calc(360px * 3 / 2);
+                        background-color: #eee;
+                        position: relative;
                         display: flex;
                         flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
+                        justify-content: center;
+                        align-items: center;
                     }
 
-                        #HomeRow{
-                            flex-grow: 1;
-                            align-items: center;
-                        }
-
-                        .Footer{
+                        .Thumbnail, .Description{
+                            display: flex;
                             width: 100%;
-                            padding: 5rem;
-                            background-color: black;
+                            height: calc(360px * 3 / 2 / 2);
+                            position: relative;
                         }
 
+                        .Thumbnail::before{
+                            content: "";
 
+                            position: absolute;
+                            top: 0;
+                            left: 0;
 
+                            width: 100%;
+                            height: 100%;
 
+                            background-image: url("./assets/images/card/todolist.jpg");
+                            background-size: cover;
+                            background-position: top left;
+                            background-repeat: no-repeat;
+                            z-index: 10;
+                        }
 
+                        .Description{
+                            flex-direction: column;
+                            padding: 2rem;
+                        }
 
+                            .Description > h4{
+                                font-family: var(--Font-Family-Title);
+                                font-size: var(--Font-Size-SubTitle);
+                                font-weight: var(--Font-Weight-Bold);
+                                line-height: var(--Line-Height-SubTitle);
 
+                                text-transform: uppercase;
+                                margin-bottom: 1rem;
+                            }
 
+                            .Description > p{
+                                flex-grow: 1;
+                                overflow: auto;
+                                opacity: 85%;
+                                margin-bottom: 1rem;
+                            }
 
+                            .Actions{
+                                margin-top: 0.5rem;
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
 
+                                .Action{
+                                    margin-bottom: 0.5rem;
+                                    margin-right: 1rem;
+                                    color: #000;
+                                    opacity: 65%;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .Action:hover{
+                                    text-decoration: underline;
+                                }
 
+                #Contact{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
 
-    .Painel{
-        margin: 5rem;
-        min-width: 360px;
-        min-height: calc(360px * 3 / 2);
-        background-color: #eee;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+                    .Auto-Fill{
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                        .Information{
+                            margin: var(--Margin-Default);
+                            margin-top: 6.5rem;
+                            margin-bottom: 6.5rem;
+                        }
+                            .Form{
+                                width: var(--Width-Relative-Max);
+                                max-width: 360px;
+                
+                                padding: var(--Padding-Medium);
+                                margin-bottom: var(--Margin-Medium);
+                
+                                background-color: var(--White);
+                            }
+                                .Groups{
+                                    width: var(--Width-Relative-Max);
+                
+                                    margin-bottom: var(--Margin-Regular);
+                
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+                                    .LabelInputText{
+                                        padding-left: 0;
+                                        padding-bottom: var(--Padding-Small);
+                
+                                        width: var(--Width-Relative-Max);
+                
+                                        display: flex;
+                                    }
+                                    .InputText{
+                                        padding: var(--Padding-Regular);
+                
+                                        width: var(--Width-Relative-Max);
+                
+                                        display: flex;
+                
+                                        background-color: var(--Light-Gray);
+                                    }
+                                    .TextArea{
+                                        padding: var(--Padding-Regular);
+                
+                                        width: var(--Width-Relative-Max);
+                                        height: var(--Height-Relative-Max);
+                                        min-height: calc(var(--Height-Lateral) * 3); 
+                
+                                        display: flex;
+                                        
+                                        background-color: var(--Light-Gray);
+                                        
+                                        resize: none;
+                                    }
+                                    .InputButton{
+                                        background-color: #fff;
+                                        border: 1px solid black;
+                                        color: #000;
+                                        padding: 1rem;
+                                        width: var(--Width-Relative-Max);
+                
+                                        margin-top: var(--Margin-Regular);
+                                    }
+                                    .InputButton:hover{
+                                        background-color: #000;
+                                        color: white;
+                                    }
+                                .Groups:last-child{
+                                    margin-bottom: 0;
+                                }
+                            .Contact{
+                                width: var(--Width-Relative-Max);
+                                /* height: var(--Height-Relative-Max); */
+                
+                                padding: var(--Padding-Medium);
+                                margin-bottom: var(--Margin-Medium);
+                
+                                background-color: var(--White);
+                            }
+                                .Email{
+                                    width: var(--Width-Relative-Max);
+                                    height: var(--Height-Relative-Max);
+                
+                                    text-align: center;
+                
+                                    border: 1px solid var(--Black);
 
-    .Thumbnail, .Description{
-        display: flex;
-        width: 100%;
-        height: calc(360px * 3 / 2 / 2);
-        position: relative;
-    }
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                    .EmailText{
+                                        width: var(--Width-Relative-Max);
+                                        height: var(--Height-Relative-Max);
+                
+                                        padding: var(--Padding-Regular);
+                                        
+                                        text-align: center;
+                                    }
+                                    .Email>i{
+                                        font-size: 2rem;
+                                        padding: var(--Padding-Regular);
+                                        height: var(--Height-Relative-Max);
+                                        
+                                        background-color: var(--White);
+                
+                                        text-align: center;
+                
+                                        color: var(--Black);
+                
+                                        cursor: pointer;
+                                    }
+                                    .Email>i:hover{
+                                        background-color: var(--Black);
+                
+                                        color: var(--White);
+                                    }
+                            .SocialMidias{
+                                width: var(--Width-Relative-Max);
+                
+                                background-color: var(--Black);
+                            }
+                                .Icons{
+                                    width: var(--Width-Relative-Max);
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                    .Icons>i{
+                                        padding: var(--Padding-Regular) var(--Padding-Medium);
+                
+                                        font-size: var(--Font-Size-SubTitle);
+                                        line-height: var(--Line-Height-SubTitle);
+                                        color: var(--White);
+                                    }
+                                    .Icons>i:hover{
+                                        background-color: var(--White);
+                
+                                        color: var(--Black);
+                                    }
+                        .Footer{
+                            width: var(--Width-Relative-Max);
+                
+                            padding: var(--Padding-Regular);
+                
+                            background-color: var(--Black);
 
-    .Thumbnail::before{
-        content: "";
-
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 100%;
-
-        background-image: url("./assets/images/card/todolist.jpg");
-        background-size: cover;
-        background-position: top left;
-        background-repeat: no-repeat;
-        z-index: 10;
-    }
-
-
-
-    .Form{
-        display: flex;
-        flex-direction: column;
-        min-width: 300px;
-        min-height: 300px;
-        margin: 5rem;
-        background-color: red;
-    }
-
-    .retangulo{
-        display: inline-block;
-        min-width: 300px;
-        min-height: 100px;
-        margin: 1rem;
-        background-color: yellow;
-    }
+                            color: var(--White);
+                
+                            text-align: center;
+                        }
 
 /* .cube{
     display: inline-block;
