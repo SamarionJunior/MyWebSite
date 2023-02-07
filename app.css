@@ -27,6 +27,25 @@
         font-size: var(--Font-Size-Root);
     }
 
+    @media (max-width: 1024px){
+        html{
+            font-size: var(--Font-Size-Root-Tablet);
+        }
+    }
+
+    @media (max-width: 768px){
+        html{
+            font-size: 1vw;
+        }
+    }
+
+
+    /* @media (max-width: 1024px){
+        html *{
+            font-size: var(--Font-Size-Tablet);
+        }
+    } */
+
         body{
             width: var(--Width-Relative-Max);
             height: var(--Height-Relative-Max);
@@ -54,7 +73,7 @@
                 position: relative;
             }
 
-                .Links{
+                /* .Links{
                     position: fixed;
                     display: flex;
                     justify-content: center;
@@ -76,20 +95,31 @@
                     min-width: 320px;
                     max-width: 1920px;
                     height: 5rem;
-                    min-height: 5rem;
+                    min-height: 50px;
                     justify-content: flex-end;
 
-                    /* Desktop */
+                    
                     padding-right: 5rem;
                 }
 
                     #Link-Home, #Link-Project, #Link-Contact {
                         width: 5rem;
+                        min-width: 50px;
                         height: 100%;
+                        min-height: 50px;
                     }
 
                     #Link-Home:hover, #Link-Project:hover, #Link-Contact:hover {
                         background-color: black;
+                        color: white;
+                    }
+
+                    #Link-Home > i, #Link-Project > i, #Link-Contact > i {
+                        font-size: 16px !important;
+                    }
+
+                    #Link-Home > i:hover, #Link-Project > i:hover, #Link-Contact > i:hover {
+                        font-size: 16px !important;
                         color: white;
                     }
 
@@ -109,10 +139,11 @@
 
                     .Placard{
                         display: inline-block;
-                        margin-left: 5rem;
+                        text-align: center;
                     }
 
                         .Placard > h1{
+                            text-align: start;
                             font-family: var(--Font-Family-Display);
                             font-size: var(--Font-Size-Display);
                             letter-spacing: var(--Letter-Spacing-Display);
@@ -121,6 +152,7 @@
                         }
 
                         .Placard > h3{
+                            display: inline-block;
                             font-family: var(--Font-Family-Title);
                             font-size: var(--Font-Size-Title);
                             letter-spacing: var(--Letter-Spacing-Title);
@@ -129,11 +161,22 @@
                             text-align: center;
                             margin: 2rem 0 3rem 0;
                         }
+                    
+                        @media (max-width: 768px){
+                            .Placard > h3{
+                                font-size: 6rem;
+                                letter-spacing: calc(6rem / 10);
+                                line-height: calc(6rem / 100 * 120);
+                                margin: 4rem 0 6rem 0;
+                            }
+                        }
                 
                         .buttons{
                             width: 100%;
                             display: flex;
-                            margin-bottom: 2rem;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
                         }
                     
                             .buttons > a{
@@ -153,6 +196,34 @@
                             .buttons > a:first-of-type{
                                 margin-right: 4rem;
                             }
+                    
+                        @media (max-width: 768px){
+                            .buttons > a{
+                                width: calc(50% - 4rem);
+                                padding: 2rem;
+                                font-size: 3rem;
+                            }
+
+                            .buttons > a:first-of-type{
+                                margin-right: 8rem;
+                            }
+                        }
+                    
+                        @media (max-width: 568px){
+                            .buttons{
+                                flex-direction: column;
+                            }
+                            .buttons > a{
+                                padding: 4rem 8rem;
+
+                                margin-bottom: 3rem;
+                                width: 100%;
+                            }
+
+                            .buttons > a:first-of-type{
+                                margin-right: 0rem;
+                            }
+                        } */
 
                 #Project{
                     padding-top: 6.5rem;
@@ -163,9 +234,11 @@
                     justify-content: center;
                     align-items: center;
                 }
+
                     .Painel{
                         margin: 1.5rem;
-                        width: 360px;
+                        width: 100%;
+                        max-width: 360px;
                         height: calc(360px * 3 / 2);
                         background-color: #eee;
                         position: relative;
@@ -173,6 +246,38 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                    }
+                    
+                    @media (max-width: 768px){
+                        .Painel{
+                            width: 100%;
+                            max-width: calc(50% - 100px);
+                            min-width: 360px;
+                            margin: 50px;
+                        }
+                    }
+                    
+                    @media (max-width: 468px){
+                        .Painel{
+                            width: 100%;
+                            max-width: calc(100% - 100px);
+                            min-width: 0px;
+                            margin: 50px;
+                            font-size: calc(var(--Font-Size-SubTitle) * 1.2);
+                            line-height: calc(var(--Line-Height-SubTitle) * 1.2);
+                        }
+                    }
+                    
+                    @media (max-width: 370px){
+                        .Painel{
+                            width: 100%;
+                            max-width: calc(100% - 50px);
+                            min-width: 0px;
+                            max-height: calc((100vw - 50px) * 3 / 2);
+                            margin: 25px;
+                            font-size: calc(var(--Font-Size-SubTitle) * 1.2);
+                            line-height: calc(var(--Line-Height-SubTitle) * 1.2);
+                        }
                     }
 
                         .Thumbnail, .Description{
@@ -203,9 +308,22 @@
                             flex-direction: column;
                             padding: 2rem;
                         }
+                    
+                        @media (max-width: 1024px){
+                            .Description{
+                                padding: 2rem;
+                            }
+                        }
+                
+                        @media (max-width: 468px){
+                            .Description{
+                                padding: 4rem;
+                            }
+                        }
 
                             .Description > h4{
                                 font-family: var(--Font-Family-Title);
+                                
                                 font-size: var(--Font-Size-SubTitle);
                                 font-weight: var(--Font-Weight-Bold);
                                 line-height: var(--Line-Height-SubTitle);
@@ -213,12 +331,82 @@
                                 text-transform: uppercase;
                                 margin-bottom: 1rem;
                             }
+                    
+                            @media (max-width: 1024px){
+                                .Description > h4{
+                                    font-size: calc(var(--Font-Size-SubTitle) * 1.2);
+                                    line-height: calc(var(--Line-Height-SubTitle) * 1.2);
+                                }
+                            }
+                    
+                            @media (max-width: 768px){
+                                .Description > h4{
+                                    font-size: calc(var(--Font-Size-Normal) * 1.5);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.5);
+                                }
+                            }
+                    
+                            @media (max-width: 668px){
+                                .Description > h4{
+                                    font-size: calc(var(--Font-Size-Normal) * 1.8);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.8);
+                                }
+                            }
+                    
+                            @media (max-width: 568px){
+                                .Description > h4{
+                                    font-size: calc(var(--Font-Size-Normal) * 2.1);
+                                    line-height: calc(var(--Line-Height-Normal) * 2.1);
+                                }
+                            }
+                    
+                            @media (max-width: 468px){
+                                .Description > h4{
+                                    font-size: calc(var(--Font-Size-SubTitle) * 2.5);
+                                    line-height: calc(var(--Line-Height-SubTitle) * 2.5);
+                                }
+                            }
 
                             .Description > p{
                                 flex-grow: 1;
                                 overflow: auto;
                                 opacity: 85%;
                                 margin-bottom: 1rem;
+                            }
+                    
+                            @media (max-width: 1024px){
+                                .Description > p{
+                                    font-size: calc(var(--Font-Size-Normal) * 1.2);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.2);
+                                }
+                            }
+                    
+                            @media (max-width: 768px){
+                                .Description > p{
+                                    font-size: calc(var(--Font-Size-Normal) * 1.5);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.5);
+                                }
+                            }
+                    
+                            @media (max-width: 668px){
+                                .Description > p{
+                                    font-size: calc(var(--Font-Size-Normal) * 1.8);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.8);
+                                }
+                            }
+                    
+                            @media (max-width: 568px){
+                                .Description > p{
+                                    font-size: calc(var(--Font-Size-Normal) * 2.1);
+                                    line-height: calc(var(--Line-Height-Normal) * 2.1);
+                                }
+                            }
+                    
+                            @media (max-width: 468px){
+                                .Description > p{
+                                    font-size: calc(var(--Font-Size-Normal) * 2.5);
+                                    line-height: calc(var(--Line-Height-Normal) * 2.5);
+                                }
                             }
 
                             .Actions{
@@ -229,7 +417,7 @@
 
                                 .Action{
                                     margin-bottom: 0.5rem;
-                                    margin-right: 1rem;
+                                    margin-right: 1.5rem;
                                     color: #000;
                                     opacity: 65%;
                                     font-weight: bold;
@@ -239,8 +427,44 @@
                                 .Action:hover{
                                     text-decoration: underline;
                                 }
+                    
+                                @media (max-width: 1024px){
+                                    .Action{
+                                        font-size: calc(var(--Font-Size-Normal) * 1.2);
+                                        line-height: calc(var(--Line-Height-Normal) * 1.2);
+                                    }
+                                }
+                    
+                                @media (max-width: 768px){
+                                    .Action{
+                                        font-size: calc(var(--Font-Size-Normal) * 1.5);
+                                        line-height: calc(var(--Line-Height-Normal) * 1.5);
+                                    }
+                                }
+                        
+                                @media (max-width: 668px){
+                                    .Action{
+                                        font-size: calc(var(--Font-Size-Normal) * 1.8);
+                                        line-height: calc(var(--Line-Height-Normal) * 1.8);
+                                    }
+                                }
+                        
+                                @media (max-width: 568px){
+                                    .Action{
+                                        font-size: calc(var(--Font-Size-Normal) * 2.1);
+                                        line-height: calc(var(--Line-Height-Normal) * 2.1);
+                                    }
+                                }
+                    
+                                @media (max-width: 468px){
+                                    .Action{
+                                        margin-right: 2rem;
+                                        font-size: calc(var(--Font-Size-Normal) * 2.5);
+                                        line-height: calc(var(--Line-Height-Normal) * 2.5);
+                                    }
+                                }
 
-                #Contact{
+                /* #Contact{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -254,20 +478,42 @@
                         justify-content: center;
                         align-items: center;
                     }
+                    
+                    @media (max-width: 468px){
+                        .Auto-Fill{
+                            width: 100%;
+                        }
+                    }
+
                         .Information{
                             margin: var(--Margin-Default);
-                            margin-top: 6.5rem;
-                            margin-bottom: 6.5rem;
+                            margin-top: 65px;
+                            margin-bottom: 65px;
                         }
+                    
+                        @media (max-width: 468px){
+                            .Information{
+                                width: calc(100% - 50px);
+                            }
+                        }
+
                             .Form{
                                 width: var(--Width-Relative-Max);
-                                max-width: 360px;
                 
                                 padding: var(--Padding-Medium);
                                 margin-bottom: var(--Margin-Medium);
                 
                                 background-color: var(--White);
                             }
+                    
+                            @media (max-width: 768px){
+                                .Form{
+                                    max-width: 100%;
+                
+                                    padding: calc(var(--Padding-Medium) * 2);
+                                }
+                            }
+
                                 .Groups{
                                     width: var(--Width-Relative-Max);
                 
@@ -284,6 +530,23 @@
                 
                                         display: flex;
                                     }
+                    
+                                    @media (max-width: 768px){
+                                        .LabelInputText{
+                                            font-size: 3.6rem;
+                                            padding: 2rem 0;
+                                        }
+                                    }
+                    
+                                    @media (max-width: 468px){
+                                        .LabelInputText{
+                                            font-size: 7.2rem;
+                                            letter-spacing: calc(7.2rem / 10);
+                                            line-height: calc(7.2rem / 100 * 120);
+                                            padding: 4rem 0;
+                                        }
+                                    }
+
                                     .InputText{
                                         padding: var(--Padding-Regular);
                 
@@ -293,6 +556,23 @@
                 
                                         background-color: var(--Light-Gray);
                                     }
+                    
+                                    @media (max-width: 768px){
+                                        .InputText{
+                                            font-size: 3.6rem;
+                                            padding: calc(var(--Padding-Regular) * 2);
+                                        }
+                                    }
+                    
+                                    @media (max-width: 468px){
+                                        .InputText{
+                                            font-size: 7.2rem;
+                                            letter-spacing: calc(7.2rem / 10);
+                                            line-height: calc(7.2rem / 100 * 120);
+                                            padding: calc(var(--Padding-Regular) * 4);
+                                        }
+                                    }
+
                                     .TextArea{
                                         padding: var(--Padding-Regular);
                 
@@ -306,6 +586,26 @@
                                         
                                         resize: none;
                                     }
+                    
+                                    @media (max-width: 768px){
+                                        .TextArea{
+                                            min-height: calc(var(--Height-Lateral) * 6); 
+                                            font-size: 3.6rem;
+                                            letter-spacing: calc(3.6rem / 10);
+                                            line-height: calc(3.6rem / 100 * 120);
+                                            padding: calc(var(--Padding-Regular) * 2);
+                                        }
+                                    }
+                    
+                                    @media (max-width: 468px){
+                                        .TextArea{
+                                            font-size: 7.2rem;
+                                            letter-spacing: calc(7.2rem / 10);
+                                            line-height: calc(7.2rem / 100 * 120);
+                                            padding: calc(var(--Padding-Regular) * 4);
+                                        }
+                                    }
+                                    
                                     .InputButton{
                                         background-color: #fff;
                                         border: 1px solid black;
@@ -315,6 +615,27 @@
                 
                                         margin-top: var(--Margin-Regular);
                                     }
+                    
+                                    @media (max-width: 768px){
+                                        .InputButton{
+                                            margin-top: calc(var(--Margin-Regular) * 2);
+                                            font-size: 16px;
+                                            letter-spacing: calc(16px / 10);
+                                            line-height: calc(16px / 100 * 120);
+                                            padding: calc(var(--Padding-Regular) * 2);
+                                        }
+                                    }
+                    
+                                    @media (max-width: 468px){
+                                        .InputButton{
+                                            margin-top: calc(var(--Margin-Regular) * 4);
+                                            /* font-size: 7.2rem;
+                                            letter-spacing: calc(7.2rem / 10);
+                                            line-height: calc(7.2rem / 100 * 120); */
+                                            /* padding: calc(var(--Padding-Regular) * 8); */
+                                        /*}
+                                    }
+                                    
                                     .InputButton:hover{
                                         background-color: #000;
                                         color: white;
@@ -324,12 +645,17 @@
                                 }
                             .Contact{
                                 width: var(--Width-Relative-Max);
-                                /* height: var(--Height-Relative-Max); */
                 
                                 padding: var(--Padding-Medium);
                                 margin-bottom: var(--Margin-Medium);
                 
                                 background-color: var(--White);
+                            }
+                    
+                            @media (max-width: 768px){
+                                .Contact{
+                                    padding: calc(var(--Padding-Medium) * 2);
+                                }
                             }
                                 .Email{
                                     width: var(--Width-Relative-Max);
@@ -343,6 +669,7 @@
                                     justify-content: center;
                                     align-items: center;
                                 }
+
                                     .EmailText{
                                         width: var(--Width-Relative-Max);
                                         height: var(--Height-Relative-Max);
@@ -351,6 +678,19 @@
                                         
                                         text-align: center;
                                     }
+                    
+                                    @media (max-width: 768px){
+                                        .EmailText{
+                                            font-size: 3.6rem;
+                                        }
+                                    }
+                    
+                                    @media (max-width: 468px){
+                                        .EmailText{
+
+                                        }
+                                    }
+                                    
                                     .Email>i{
                                         font-size: 2rem;
                                         padding: var(--Padding-Regular);
@@ -364,11 +704,20 @@
                 
                                         cursor: pointer;
                                     }
+                    
+                                    @media (max-width: 768px){
+                                        .Email>i{
+                                            font-size: 4rem;
+                                            padding: calc(var(--Padding-Regular) * 2);
+                                        }
+                                    }
+                                    
                                     .Email>i:hover{
                                         background-color: var(--Black);
                 
                                         color: var(--White);
                                     }
+
                             .SocialMidias{
                                 width: var(--Width-Relative-Max);
                 
@@ -392,6 +741,15 @@
                 
                                         color: var(--Black);
                                     }
+                    
+                                    @media (max-width: 768px){
+                                        .Icons>i{
+                                            padding: calc(var(--Padding-Medium) * 2);
+                    
+                                            font-size: calc(var(--Font-Size-SubTitle) * 2);
+                                        }
+                                    }
+
                         .Footer{
                             width: var(--Width-Relative-Max);
                 
@@ -404,6 +762,24 @@
                     
                                 text-align: center;
                             }
+                    
+                        @media (max-width: 768px){
+                            .Footer{
+                                padding: calc(var(--Padding-Regular) * 2);
+                            }
+                            .Copyright{
+                                font-size: 2.8rem;
+                            }
+                        }
+                
+                        @media (max-width: 568px){
+                            .Footer{
+                                padding: calc(var(--Padding-Regular) * 4);
+                            }
+                            .Copyright{
+                                font-size: 3.6rem;
+                            }
+                        } */
 
 /* .cube{
     display: inline-block;
