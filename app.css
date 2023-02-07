@@ -398,11 +398,12 @@
                             padding: var(--Padding-Regular);
                 
                             background-color: var(--Black);
-
-                            color: var(--White);
-                
-                            text-align: center;
                         }
+                            .Copyright{
+                                color: var(--White);
+                    
+                                text-align: center;
+                            }
 
 /* .cube{
     display: inline-block;
