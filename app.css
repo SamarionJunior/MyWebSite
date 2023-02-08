@@ -27,11 +27,11 @@
         font-size: var(--Font-Size-Root);
     }
 
-    @media (max-width: 1024px){
+    /* @media (max-width: 1024px){
         html{
             font-size: var(--Font-Size-Root-Tablet);
         }
-    }
+    } */
 
     @media (max-width: 768px){
         html{
@@ -122,15 +122,15 @@
                         font-size: 16px !important;
                         color: white;
                     }
-
-                .View{
+*/
+                 .View{
                     width: calc(100%);
                     min-width: 320px;
                     max-width: 1920px;
                     height: 100%;
                     min-height: var(--Height-Absolute-Max);
-                }
-
+                } 
+/*
                 #Home{
                     display: flex;
                     justify-content: center;
@@ -249,32 +249,53 @@
                     }
                     
                     @media (max-width: 768px){
+                        #Project{
+                            padding-left: 25px;
+                        }
                         .Painel{
                             width: 100%;
+                            max-width: calc(50% - 25px * 2);
+                            min-width: 270px;
+                            height: 100%;
+                            max-height: calc((50vw - 25px * 2) * 3 / 2);
+                            min-height: 405px;
+                            margin: 25px;
+                            margin-left: 0;
+                            margin-top: 0;
+                            /* font-size: calc(var(--Font-Size-SubTitle) * 1.2); */
+                            /* line-height: calc(var(--Line-Height-SubTitle) * 1.2); */
+                            /* line-height: normal; */
+                            /* width: 100%;
                             max-width: calc(50% - 100px);
-                            min-width: 360px;
-                            margin: 50px;
+                            min-width: 360px; */
+                            /* margin: 25px; */
                         }
                     }
                     
                     @media (max-width: 468px){
+                        #Project{
+                            padding-left: 0;
+                        }
                         .Painel{
-                            width: 100%;
+                            /* width: 100%;
                             max-width: calc(100% - 100px);
                             min-width: 0px;
-                            margin: 50px;
-                            font-size: calc(var(--Font-Size-SubTitle) * 1.2);
-                            line-height: calc(var(--Line-Height-SubTitle) * 1.2);
+                            margin: 50px; */
+                            /* font-size: calc(var(--Font-Size-SubTitle) * 1.2); */
+                            /* line-height: calc(var(--Line-Height-SubTitle) * 1.2); */
                         }
                     }
                     
                     @media (max-width: 370px){
                         .Painel{
                             width: 100%;
-                            max-width: calc(100% - 50px);
-                            min-width: 0px;
-                            max-height: calc((100vw - 50px) * 3 / 2);
-                            margin: 25px;
+                            max-width: calc(100% - 7.8125rem * 2);
+                            min-width: 270px;
+                            height: 100%;
+                            max-height: calc((100vw - 7.8125rem * 2) * 3 / 2);
+                            min-height: 405px;
+                            margin: 7.8125rem;
+                            margin-bottom: 0;
                             font-size: calc(var(--Font-Size-SubTitle) * 1.2);
                             line-height: calc(var(--Line-Height-SubTitle) * 1.2);
                         }
@@ -362,6 +383,7 @@
                     
                             @media (max-width: 468px){
                                 .Description > h4{
+                                    font-size: clamp(1rem, 2.5vw, 2rem); 
                                     font-size: calc(var(--Font-Size-SubTitle) * 2.5);
                                     line-height: calc(var(--Line-Height-SubTitle) * 2.5);
                                 }
