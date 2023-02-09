@@ -327,18 +327,18 @@
 
                         .Description{
                             flex-direction: column;
-                            padding: 2rem;
+                            padding: clamp(20px, 4rem, 25px);
                         }
                     
                         @media (max-width: 1024px){
                             .Description{
-                                padding: 2rem;
+                                /* padding: 2rem; */
                             }
                         }
                 
                         @media (max-width: 468px){
                             .Description{
-                                padding: 4rem;
+                                /* padding: 4rem; */
                             }
                         }
 
@@ -350,42 +350,41 @@
                                 line-height: var(--Line-Height-SubTitle);
 
                                 text-transform: uppercase;
-                                margin-bottom: 1rem;
                             }
                     
                             @media (max-width: 1024px){
                                 .Description > h4{
-                                    font-size: calc(var(--Font-Size-SubTitle) * 1.2);
-                                    line-height: calc(var(--Line-Height-SubTitle) * 1.2);
+                                    /* font-size: clamp(1rem, 2.5vw, 2rem);  */
+                                    /* font-size: calc(var(--Font-Size-SubTitle) * 1.2);
+                                    line-height: calc(var(--Line-Height-SubTitle) * 1.2); */
                                 }
                             }
                     
                             @media (max-width: 768px){
                                 .Description > h4{
-                                    font-size: calc(var(--Font-Size-Normal) * 1.5);
-                                    line-height: calc(var(--Line-Height-Normal) * 1.5);
+                                    font-size: clamp(25px, 3.9rem, 30px);
+                                    line-height: clamp(calc(25px / 100 * 120), calc(3.9rem / 100 * 120), calc(30px / 100 * 120));
                                 }
                             }
                     
                             @media (max-width: 668px){
                                 .Description > h4{
-                                    font-size: calc(var(--Font-Size-Normal) * 1.8);
-                                    line-height: calc(var(--Line-Height-Normal) * 1.8);
+                                    /* font-size: calc(var(--Font-Size-Normal) * 1.8);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.8); */
                                 }
                             }
                     
                             @media (max-width: 568px){
                                 .Description > h4{
-                                    font-size: calc(var(--Font-Size-Normal) * 2.1);
-                                    line-height: calc(var(--Line-Height-Normal) * 2.1);
+                                    /* font-size: calc(var(--Font-Size-Normal) * 2.1);
+                                    line-height: calc(var(--Line-Height-Normal) * 2.1); */
                                 }
                             }
                     
                             @media (max-width: 468px){
                                 .Description > h4{
-                                    font-size: clamp(1rem, 2.5vw, 2rem); 
-                                    font-size: calc(var(--Font-Size-SubTitle) * 2.5);
-                                    line-height: calc(var(--Line-Height-SubTitle) * 2.5);
+                                    /* font-size: calc(var(--Font-Size-SubTitle) * 2.5);
+                                    line-height: calc(var(--Line-Height-SubTitle) * 2.5); */
                                 }
                             }
 
@@ -393,96 +392,97 @@
                                 flex-grow: 1;
                                 overflow: auto;
                                 opacity: 85%;
-                                margin-bottom: 1rem;
+                                margin-top: clamp(5px, 5rem, 15px);
+                                margin-bottom: clamp(5px, 5rem, 15px);
                             }
                     
                             @media (max-width: 1024px){
                                 .Description > p{
-                                    font-size: calc(var(--Font-Size-Normal) * 1.2);
-                                    line-height: calc(var(--Line-Height-Normal) * 1.2);
+                                    /* font-size: calc(var(--Font-Size-Normal) * 1.2);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.2); */
                                 }
                             }
                     
                             @media (max-width: 768px){
                                 .Description > p{
-                                    font-size: calc(var(--Font-Size-Normal) * 1.5);
-                                    line-height: calc(var(--Line-Height-Normal) * 1.5);
+                                    font-size: clamp(16px, 2.6rem, 18px);
+                                    line-height: clamp(calc(16px / 100 * 120), calc(3.9rem / 100 * 120), calc(18px / 100 * 120));
                                 }
                             }
                     
                             @media (max-width: 668px){
                                 .Description > p{
-                                    font-size: calc(var(--Font-Size-Normal) * 1.8);
-                                    line-height: calc(var(--Line-Height-Normal) * 1.8);
+                                    /* font-size: calc(var(--Font-Size-Normal) * 1.8);
+                                    line-height: calc(var(--Line-Height-Normal) * 1.8); */
                                 }
                             }
                     
                             @media (max-width: 568px){
                                 .Description > p{
-                                    font-size: calc(var(--Font-Size-Normal) * 2.1);
-                                    line-height: calc(var(--Line-Height-Normal) * 2.1);
+                                    /* font-size: calc(var(--Font-Size-Normal) * 2.1);
+                                    line-height: calc(var(--Line-Height-Normal) * 2.1); */
                                 }
                             }
                     
                             @media (max-width: 468px){
                                 .Description > p{
-                                    font-size: calc(var(--Font-Size-Normal) * 2.5);
-                                    line-height: calc(var(--Line-Height-Normal) * 2.5);
+                                    /* font-size: calc(var(--Font-Size-Normal) * 2.5);
+                                    line-height: calc(var(--Line-Height-Normal) * 2.5); */
                                 }
                             }
 
                             .Actions{
-                                margin-top: 0.5rem;
                                 display: flex;
                                 flex-wrap: wrap;
+                                justify-content: space-around;
+                                align-items: center;
                             }
 
                                 .Action{
-                                    margin-bottom: 0.5rem;
-                                    margin-right: 1.5rem;
-                                    color: #000;
-                                    opacity: 65%;
+                                    opacity: 85%;
                                     font-weight: bold;
-                                    text-transform: uppercase;
                                 }
                                 
                                 .Action:hover{
+                                    opacity: 100%;
                                     text-decoration: underline;
                                 }
                     
                                 @media (max-width: 1024px){
                                     .Action{
-                                        font-size: calc(var(--Font-Size-Normal) * 1.2);
-                                        line-height: calc(var(--Line-Height-Normal) * 1.2);
+                                        /* font-size: calc(var(--Font-Size-Normal) * 1.2);
+                                        line-height: calc(var(--Line-Height-Normal) * 1.2); */
                                     }
                                 }
                     
                                 @media (max-width: 768px){
                                     .Action{
-                                        font-size: calc(var(--Font-Size-Normal) * 1.5);
-                                        line-height: calc(var(--Line-Height-Normal) * 1.5);
+                                        font-size: clamp(16px, 2.6rem, 18px);
+                                        line-height: clamp(calc(16px / 100 * 120), calc(3.9rem / 100 * 120), calc(18px / 100 * 120));
+                                        /* font-size: calc(var(--Font-Size-Normal) * 1.5);
+                                        line-height: calc(var(--Line-Height-Normal) * 1.5); */
                                     }
                                 }
                         
                                 @media (max-width: 668px){
                                     .Action{
-                                        font-size: calc(var(--Font-Size-Normal) * 1.8);
-                                        line-height: calc(var(--Line-Height-Normal) * 1.8);
+                                        /* font-size: calc(var(--Font-Size-Normal) * 1.8);
+                                        line-height: calc(var(--Line-Height-Normal) * 1.8); */
                                     }
                                 }
                         
                                 @media (max-width: 568px){
                                     .Action{
-                                        font-size: calc(var(--Font-Size-Normal) * 2.1);
-                                        line-height: calc(var(--Line-Height-Normal) * 2.1);
+                                        /* font-size: calc(var(--Font-Size-Normal) * 2.1);
+                                        line-height: calc(var(--Line-Height-Normal) * 2.1); */
                                     }
                                 }
                     
                                 @media (max-width: 468px){
                                     .Action{
-                                        margin-right: 2rem;
-                                        font-size: calc(var(--Font-Size-Normal) * 2.5);
-                                        line-height: calc(var(--Line-Height-Normal) * 2.5);
+                                        /* margin-right: 2rem; */
+                                        /* font-size: calc(var(--Font-Size-Normal) * 2.5);
+                                        line-height: calc(var(--Line-Height-Normal) * 2.5); */
                                     }
                                 }
 
