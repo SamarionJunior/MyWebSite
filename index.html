@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/icons/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./app.css">
         <title>My Web Site</title>
     </head>
@@ -22,7 +22,7 @@
                     <i class="fa-solid fa-folder-open"></i>
                 </a>
                 <a href="#Contact" class="Link" id="Link-Contact">
-                    <i class="fa-solid fa-envelope""></i>
+                    <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
 
@@ -31,8 +31,8 @@
                     <h1>samarion<br>junior</h1>
                     <h3>Desenvolvedor Web</h3>
                     <div class="buttons">
-                        <a href="#Home">Projetos</a>
-                        <a href="#Home">Contato</a>
+                        <a href="#Project">Projetos</a>
+                        <a href="#Contact">Contato</a>
                     </div>
                 </div>
             </div>
@@ -53,9 +53,9 @@
                             Quod cum officiis debitis ducimus non delectus accusamus exercitationem nihil?
                         </p>
                         <div class="Actions">
-                            <a href="#Project" class="Action">Web</a>
-                            <a href="#Project" class="Action">Git</a>
-                            <a href="#Project" class="Action">Apk</a>
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="Action">Web</a>
+                            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" class="Action">Git</a>
+                            <a href="https://pt.wikipedia.org/" target="_blank" rel="noopener noreferrer" class="Action">Apk</a>
                         </div>
                     </div>
                 </div>
@@ -74,9 +74,9 @@
                             Quod cum officiis debitis ducimus non delectus accusamus exercitationem nihil?
                         </p>
                         <div class="Actions">
-                            <a href="#Project" class="Action">Web</a>
-                            <a href="#Project" class="Action">Git</a>
-                            <a href="#Project" class="Action">Apk</a>
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="Action">Web</a>
+                            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" class="Action">Git</a>
+                            <a href="https://pt.wikipedia.org/" target="_blank" rel="noopener noreferrer" class="Action">Apk</a>
                         </div>
                     </div>
                 </div>
@@ -95,9 +95,9 @@
                             Quod cum officiis debitis ducimus non delectus accusamus exercitationem nihil?
                         </p>
                         <div class="Actions">
-                            <a href="#Project" class="Action">Web</a>
-                            <a href="#Project" class="Action">Git</a>
-                            <a href="#Project" class="Action">Apk</a>
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="Action">Web</a>
+                            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" class="Action">Git</a>
+                            <a href="https://pt.wikipedia.org/" target="_blank" rel="noopener noreferrer" class="Action">Apk</a>
                         </div>
                     </div>
                 </div>
@@ -125,16 +125,17 @@
                         </div>
                         <div class="Column Contact">
                             <div class="Row Email">
-                                <div class="Row EmailText">example2@e-mail.com</div>
-                                <i class="fa-regular fa-copy Row"></i>
+                                <!-- <div class="Row EmailText">example2@e-mail.com</div> -->
+                                <input class="Row EmailText" id="TextCopyEmail" type="text" value="example2@e-mail.com" readonly>
+                                <i class="fa-regular fa-copy Row" id="ButtonCopyEmail"></i>
                             </div>
                         </div>
                         <div class="Column SocialMidias">
                             <div class="Row Icons">
-                                <a href="#Contact">
+                                <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
-                                <a href="#Contact">
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-linkedin"></i>
                                 </a>
                             </div>
@@ -147,7 +148,7 @@
             </div>
 
         </div>
-        <script src="./src/js/main.js"></script>
+        <script src="./main.js"></script>
         <!-- <script>
             window.addEventListener("onLoad", e => {
                 history.replaceState(null, null, ' ');

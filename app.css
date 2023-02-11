@@ -156,12 +156,40 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    position: relative;
+                }
+
+                #Home::before{
+                    content: "";
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background-image: url("./assets/images/background/03.jpg");
+                    background-size: cover;
+                    background-position: top left;
+                    background-repeat: no-repeat;
+                    z-index: 10;
+
+                    filter: brightness(30%);
+                }
+
+                @media (max-width: 768px){
+                    #Home::before{
+                        background-position: top right -200px;
+                    }
                 }
 
                     .Placard{
                         min-width: 280px;
                         display: inline-block;
                         text-align: center;
+                        z-index: 20;
                     }
 
                     @media (max-width: 1024px){
@@ -177,6 +205,7 @@
                             letter-spacing: var(--Letter-Spacing-Display);
                             line-height: var(--Line-Height-Display);
                             font-weight: 900;
+                            color: #fff;
                         }
 
                         @media (max-width: 1024px){
@@ -213,6 +242,7 @@
                             font-weight: bold;
                             text-align: center;
                             margin: 2rem 0 3rem 0;
+                            color: #fff;
                         }
 
                         @media (max-width: 1024px){
@@ -252,20 +282,20 @@
                                 width: calc(50% - 2rem);
                                 padding: 1.5rem;
                                 text-transform: uppercase;
-                                border: 1px solid #000;
-                                background-color: black;
-                                color: white;
+                                border: 1px solid white;
+                                background-color: white;
+                                color: black;
                                 text-align: center;
                             }
 
                             .buttons > a:hover{
-                                background-color: white;
-                                color: black;
+                                background-color: black;
+                                color: white;
                             }
 
                             .buttons > a:active{
-                                background-color: black;
-                                color: white;
+                                background-color: white;
+                                color: black;
                             }
 
                             .buttons > a:first-of-type{
@@ -282,13 +312,13 @@
                                 }
 
                                 .buttons > a:hover{
-                                    background-color: black;
-                                    color: white;
+                                    background-color: white;
+                                    color: black;
                                 }
     
                                 .buttons > a:active{
-                                    background-color: white;
-                                    color: black;
+                                    background-color: black;
+                                    color: white;
                                 }
 
                                 .buttons > a:first-of-type{
@@ -320,6 +350,8 @@
                     justify-content: center;
                     align-items: center;
                     padding: 20px;
+
+                    position: relative;
                 }
                     
                 @media (max-width: 768px){
@@ -342,6 +374,7 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                        z-index: 20;
                     }
 
                         .Thumbnail, .Description{
@@ -452,6 +485,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    background-color: #111;
                 }
 
                     .Auto-Fill{
@@ -649,6 +683,10 @@
                                         
                                         text-align: center;
                                     }
+
+                                    .EmailText:focus{
+                                        box-shadow: none;
+                                    }
                     
                                     @media (max-width: 768px){
                                         .EmailText{
@@ -708,14 +746,17 @@
 
                             .SocialMidias{
                                 width: var(--Width-Relative-Max);
-                
-                                background-color: var(--Black);
+
+                                background-color: var(--White);
+                                color: var(--Black);
                             }
                                 .Icons{
                                     width: var(--Width-Relative-Max);
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
+                                    background-color: var(--White);
+                                    color: var(--Black);
                                 }
 
                                     .Icons > a{
@@ -724,34 +765,34 @@
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
-                                        background-color: var(--Black);
-                                        color: var(--White);
+                                        background-color: var(--White);
+                                        color: var(--Black);
                                     }
 
                                     .Icons > a:link{
-                                        background-color: var(--Black);
-                                    }
-
-                                    .Icons > a:visited{
-                                        background-color: var(--Black);
-                                    }
-
-                                    .Icons > a:hover{
                                         background-color: var(--White);
                                     }
 
-                                    .Icons > a:active{
+                                    .Icons > a:visited{
+                                        background-color: var(--White);
+                                    }
+
+                                    .Icons > a:hover{
                                         background-color: var(--Black);
+                                    }
+
+                                    .Icons > a:active{
+                                        background-color: var(--White);
                                     }
                     
                                     @media (max-width: 768px){
 
                                         .Icons > a:hover{
-                                            background-color: var(--Black);
+                                            background-color: var(--White);
                                         }
     
                                         .Icons > a:active{
-                                            background-color: var(--White);
+                                            background-color: var(--Black);
                                         }
                                     }
 
@@ -760,28 +801,28 @@
                                         }
 
                                         .Icons > a:link > i{
-                                            color: #fff;
-                                        }
-
-                                        .Icons > a:visited > i{
-                                            color: #fff;
-                                        }
-
-                                        .Icons > a:hover > i{
                                             color: #000;
                                         }
 
-                                        .Icons > a:active > i{
+                                        .Icons > a:visited > i{
+                                            color: #000;
+                                        }
+
+                                        .Icons > a:hover > i{
                                             color: #fff;
+                                        }
+
+                                        .Icons > a:active > i{
+                                            color: #000;
                                         }
                     
                                         @media (max-width: 768px){
                                             .Icons > a:hover > i{
-                                                color: #fff;
+                                                color: #000;
                                             }
     
                                             .Icons > a:active > i{
-                                                color: #000;
+                                                color: #fff;
                                             }
                                         }
 
@@ -790,7 +831,7 @@
                 
                             padding: var(--Padding-Regular);
                 
-                            background-color: var(--Black);
+                            background-color: var(--White);
                         }
                     
                         @media (max-width: 768px){
@@ -800,7 +841,7 @@
                         }
 
                             .Copyright{
-                                color: var(--White);
+                                color: var(--Black);
                     
                                 text-align: center;
 
