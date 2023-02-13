@@ -1,23 +1,46 @@
-var http = require('http');
+const express = require('express');
+// const path = require('path')
 
-http.createServer(function (req, res) {
-  var html = buildHtml(req);
+const app = express();
 
-  res.writeHead(200, {
-    'Content-Type': 'text/html',
-    'Content-Length': html.length,
-    'Expires': new Date().toUTCString()
-  });
-  res.end(html);
-}).listen(21041);
+const baseDir = `${__dirname}`
 
-function buildHtml(req) {
-  var header = '';
-  var body = 'arreia';
+app.use(express.static(`${baseDir}`))
 
-  // concatenate header string
-  // concatenate body string
+app.use(express.static('../www/public'));
 
-  return '<!DOCTYPE html>'
-       + '<html><head>' + header + '</head><body>' + body + '</body></html>';
-};
+app.listen(21041, () => 
+	console.log('Servidor iniciado na porta 21041')
+);
+
+app.get('/Teste', (req, res) => 
+  res.sendFile('index.html' , { root : "../www" } )
+);
+
+app.get('/Teste/user', (req, res) => 
+  res.send("oi")
+);
+
+// import express from 'express';
+
+// import { fileURLToPath } from 'url';
+// import { dirname } from 'path';
+
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
+
+// const app = express();
+
+// const baseDir = `${__dirname}`
+
+// console.log(baseDir)
+
+// app.use(express.static(`${baseDir}`))
+
+// app.listen(3000, () => 
+// 	console.log('Servidor iniciado na porta 3000')
+// );
+
+// app.get('/', (req, res) => 
+//   res.sendFile('index.html' , { root : baseDir } )
+// );

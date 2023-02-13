@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./app.css">
+        <link rel="stylesheet" href="public/app.css">
         <title>My Web Site</title>
     </head>
     <body>
@@ -106,26 +106,31 @@
             <div class="View" id="Contact">
                 <div class="Auto-Fill">
                     <div class="Information">
-                        <div class="Form">
+                       <form class="Form" id="Submit">
+                            <span id="Status"></span>
+                            <input type="hidden" name="_captcha" value="false">
                             <div class="Groups">
-                                <label class="LabelInputText" for="InputDe">De: </label>
-                                <input class="InputText" name="InputDe" id="InputDe" type="text" placeholder="Digite seu e-mail.">
+                                <label class="LabelInputText" for="name">Nome: </label>
+                                <input class="InputText" name="name" id="name" type="text" placeholder="Digite seu Nome.">
                             </div>
                             <div class="Groups">
-                                <label class="LabelInputText" for="InputAssunto">Assunto: </label>
-                                <input class="InputText" name="InputAssunto" id="InputAssunto" type="text" placeholder="Digite o Tema.">
+                                <label class="LabelInputText" for="_subject">Assunto: </label>
+                                <input class="InputText" name="_subject" id="_subject" type="text" placeholder="Digite o Tema.">
                             </div>
                             <div class="Groups">
-                                <label class="LabelInputText" for="TextAreaConteudo">Conteúdo</label>
-                                <textarea class="TextArea" name="TextAreaConteudo" id="TextAreaConteudo" placeholder="Digite a Messagem."></textarea>
+                                <label class="LabelInputText" for="email">De: </label>
+                                <input class="InputText" name="email" id="email" type="text" placeholder="Digite seu e-mail.">
                             </div>
                             <div class="Groups">
-                                <input class="Button-100 Button-Dark InputButton" value="Enviar" type="button" name="" id="">
+                                <label class="LabelInputText" for="message">Conteúdo:</label>
+                                <textarea class="TextArea" name="message" id="message" placeholder="Digite a Messagem."></textarea>
                             </div>
-                        </div>
+                            <div class="Groups">
+                                <input class="Button-100 Button-Dark InputButton" value="Enviar" type="submit" name="" id="">
+                            </div>
+                        </form>
                         <div class="Column Contact">
                             <div class="Row Email">
-                                <!-- <div class="Row EmailText">example2@e-mail.com</div> -->
                                 <input class="Row EmailText" id="TextCopyEmail" type="text" value="example2@e-mail.com" readonly>
                                 <i class="fa-regular fa-copy Row" id="ButtonCopyEmail"></i>
                             </div>
@@ -148,7 +153,8 @@
             </div>
 
         </div>
-        <script src="./main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="public/main.js"></script>
         <!-- <script>
             window.addEventListener("onLoad", e => {
                 history.replaceState(null, null, ' ');
