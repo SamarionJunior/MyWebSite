@@ -375,6 +375,34 @@
                         justify-content: center;
                         align-items: center;
                         z-index: 20;
+                        position: relative;
+                    }
+
+                    .Painel-Disabled{
+                        cursor: auto;
+                        user-select: none;
+                    }
+
+                    .Painel-Disabled::before{
+                        content: "em desenvolvimento";
+                        font-size: 18px;
+                        line-height: (18px / 100 * 120);
+                        font-weight: bold;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.50);
+                        cursor: auto;
+                        user-select: none;
+                        z-index: 20;
                     }
 
                         .Thumbnail, .Description{
@@ -394,11 +422,24 @@
                             width: 100%;
                             height: 100%;
 
-                            background-image: url("./assets/images/card/todolist.jpg");
                             background-size: cover;
-                            background-position: top left;
                             background-repeat: no-repeat;
                             z-index: 10;
+                        }
+
+                        #Thumbnail-ToDo::before{
+                            background-image: url("./assets/images/card/todolist.jpg");
+                            background-position: top center;
+                        }
+
+                        #Thumbnail-Pomodoro::before{
+                            background-image: url("./assets/images/card/pomodoro.jpg");
+                            background-position: center center;
+                        }
+
+                        #Thumbnail-Pokedex::before{
+                            background-image: url("./assets/images/card/pokedex.jpg");
+                            background-position: center center;
                         }
 
                         .Description{
@@ -414,7 +455,7 @@
 
                                 font-weight: var(--Font-Weight-Bold);
 
-                                text-transform: uppercase;
+                                /* text-transform: uppercase; */
 
                                 margin-bottom: 15px;
                             }
