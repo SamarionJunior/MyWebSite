@@ -1,7 +1,0 @@
-.Display{
-    font-family: var(--Font-Family-Display);
-    font-weight: var(--Font-Weight-Black);
-    font-size: var(--Font-Size-Display);
-    letter-spacing: var(--Letter-Spacing-Display);
-    line-height: var(--Line-Height-Display);
-}
